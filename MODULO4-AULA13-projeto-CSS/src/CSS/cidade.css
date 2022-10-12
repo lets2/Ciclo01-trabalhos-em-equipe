@@ -218,7 +218,7 @@ table tr th{
     }
     100%{
   
-        transform: translateY(-2rem);
+        transform: translateY(-1rem);
     }
 }
 
