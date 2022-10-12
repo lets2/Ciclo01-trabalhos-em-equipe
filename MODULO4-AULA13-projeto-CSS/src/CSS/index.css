@@ -1,11 +1,8 @@
-/* font-family: 'Libre Franklin', sans-serif;
-
-font-family: 'Poppins', sans-serif; */
-/* ==global configuration== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* ==declaring variables== */
@@ -20,9 +17,8 @@ font-family: 'Poppins', sans-serif; */
 
 /* ==generic classes== */
 .container {
-    padding-left: 5vw;
-    padding-right: 5vw;
-    width: 100vw;
+    padding: 1rem 5vw;
+    width: 100%;
     text-align: center;
 }
 
@@ -40,39 +36,69 @@ font-family: 'Poppins', sans-serif; */
 }
 
 .title {
-    padding: .7rem 0 .5rem 0;
-    font-family: 'Poppins', sans-serif;
+    padding: 0.7rem 0 0.5rem 0;
+
+    font-family: "Poppins", sans-serif;
     font-size: 2rem;
 }
 
 .subtitle {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.5rem;
     font-weight: 500;
 }
 
 .text {
-    padding: .5rem 0;
-    font-family: 'Libre Franklin', sans-serif;
+    padding: 0.5rem 0;
+
+    font-family: "Libre Franklin", sans-serif;
     line-height: 1.7rem;
     font-size: 1.3rem;
     text-align: justify;
 }
 
+.text-container {
+    padding-top: 1.5rem;
+}
+
 a {
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: "Libre Franklin", sans-serif;
     text-decoration: none;
-    color: var(--text-color);
     font-size: 1.3rem;
+    color: var(--text-color);
 }
 
 a:hover {
-    text-decoration: underline var(--main-color) .15rem;
     color: var(--main-color);
+    text-decoration: underline var(--main-color) 0.15rem;
 }
 
 a:active {
     color: var(--main-color);
+}
+
+.button {
+    line-height: 4rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    padding: 1rem 2rem;
+    border: transparent 1px solid;
+    border-radius: 0.5rem;
+
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+
+    transition: all 600ms ease;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+
+    text-decoration: none;
+
+    border: solid 1px var(--main-color);
 }
 
 .grid-container {
@@ -93,10 +119,12 @@ a:active {
     top: 0;
 
     padding: 0.2rem 0;
+    z-index: 10;
 }
 
 #header div.container {
     justify-content: space-between;
+    padding: 0 5vw;
 }
 
 #header img {
@@ -105,8 +133,10 @@ a:active {
 
 #header figure a {
     display: inline-block;
+
     width: 7rem;
     height: 7rem;
+    
     background-image: url(../images/BrasaoSuzano.svg);
     background-position: 5%;
     background-size: 100%;
@@ -114,18 +144,110 @@ a:active {
 }
 
 #header nav {
-    gap: 1.2rem;
     text-align: center;
     font-weight: 600;
     text-transform: uppercase;
 
+    gap: 1.2rem;
 }
 
 #header nav .fa-bars {
     scale: 200%;
 }
 
-/* ==footer== */
+/* ==main content== */
+main {
+    background-color: var(--primary-color);
+}
+
+#spacing {
+    height: 78px;
+}
+
+/* ==hero section== */
+#hero {
+    width: 100%;
+    height: 50vw;
+
+    background-image: url(../images/banner-cidade.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 5%;
+    background-attachment: fixed;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+}
+
+/* ==galery section== */
+#galery div {
+    background-color: var(--secondary-color);
+}
+
+#galery svg ~ svg {
+    transform: rotateZ(180deg);
+}
+
+#galery figure,
+#galery img {
+    width: 100%;
+
+    transition: all 600ms ease;
+}
+
+#galery figure {
+    padding: 1rem 0;
+}
+
+#galery figure:hover img {
+    scale: 115%;
+}
+
+#galery .image-container {
+    overflow: hidden;
+}
+
+#galery figcaption {
+    padding-top: 1rem;
+}
+
+/* ==final section== */
+#background-wrap {
+    background-image: url(../images/history-background.svg);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
+#history,
+#news,
+#back-to-top {
+    background-color: #afe8ff80;
+}
+
+/* ==news sub-section-- */
+#news input[type="email"] {
+    width: 50vw;
+    height: 27px;
+
+    padding: 0.2rem 1rem;
+    
+    line-height: 0.8rem;
+    
+    border-radius: 0.5rem;
+}
+
+#news .button {
+    line-height: 0.5rem;
+    text-transform: uppercase;
+}
+
+#news form {
+    padding-top: 1rem;
+}
+
+/* ==back to top button== */
 #back-to-top {
     justify-content: flex-end;
 }
@@ -139,16 +261,20 @@ a:active {
     background-image: url(../images/arrow-up-solid.svg);
     background-repeat: no-repeat;
     background-position: 50% 0;
+
+    animation: arrow-move 600ms ease-in-out alternate infinite;
 }
 
+/* ==footer== */
 #footer {
-    padding: .5rem 5vw;
+    padding: 0.5rem 5vw;
+
     border-top: hsla(0, 0%, 0%, 0.1) solid 1px;
 }
 
 #footer p {
-    text-align: center;
     font-size: 1rem;
+    text-align: center;
 }
 
 #footer #copyright {
@@ -161,15 +287,24 @@ a:active {
 }
 
 #footer a:hover {
-    text-decoration: underline var(--text-color) .1rem;
     color: var(--text-color);
+    text-decoration: underline var(--text-color) 0.1rem;
+}
+
+/* ==animations== */
+@keyframes arrow-move {
+    from {
+        transform: translateY(0rem);
+    }
+    to {
+        transform: translateY(-1rem);
+    }
 }
 
 /* ==responsive design== */
 @media screen and (min-width: 810px) {
-    
     /* ==generic classes== */
-    
+
     .title {
         font-size: 2.5rem;
     }
@@ -179,19 +314,19 @@ a:active {
     }
 
     .text {
-        line-height: 2.2rem;
         font-size: 1.8rem;
+        line-height: 2.2rem;
     }
 
     .mobile-hide {
         display: inline;
     }
-    
+
     .grid-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
-    
+
     .desktop-hide {
         display: none;
     }
@@ -202,7 +337,7 @@ a:active {
 
     /* ==header== */
     #header {
-        padding: .5rem 0;
+        padding: 0.5rem 0;
     }
 
     #header a {
@@ -212,7 +347,8 @@ a:active {
     #header #search {
         width: 15vw;
         height: 2.2rem;
-        padding: .2rem;
+
+        padding: 0.2rem;
 
         background-image: url(../images/magnifying-glass-solid.svg);
         background-repeat: no-repeat;
@@ -228,7 +364,7 @@ a:active {
     }
 
     #footer p {
-        text-align: center;
         font-size: 1.5rem;
+        text-align: center;
     }
 }
