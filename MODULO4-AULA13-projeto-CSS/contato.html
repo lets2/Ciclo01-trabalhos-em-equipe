@@ -1,0 +1,115 @@
+<!--Trabalho de HTML para o professor Rodolfo-->
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bem-vindo a Suzano</title>
+  </head>
+  <body>
+    <header>
+      <figure>
+        <a href="https://www.suzano.sp.gov.br/web/cidade/" target="_blank">
+          <img
+            src="./src/images/BrasaoSuzano.svg"
+            alt="Brasão da Cidade de Suzano"
+            height="100"
+          />
+        </a>
+      </figure>
+
+      <svg width="100%" height="30">
+        <rect width="100%" height="30" fill="orange" />
+      </svg>
+
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./cidade.html">História</a>
+        <a href="./media.html">Mídias</a>
+        <a href="./contato.html">Contato</a>
+      </nav>
+      <section>
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Pesquisar"
+        />
+        <input type="button" value="pesquisar" />
+      </section>
+    </header>
+
+    <main>
+      <section>
+        <address>
+          <p>Rua Baruel, 501 - Centro CEP: 08675-000</p>
+          <p>Telefone: <a href="tel:+5547447322">(11) 4744-7322</a></p>       
+        </address>      
+          <figure>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d278208.3549536655!2d-46.468946026005895!3d-23.626509122358605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce7176a5cf4309%3A0x7678f276a368e6e2!2sSuzano%20-%20Palmeiras%20de%20S%C3%A3o%20Paulo%2C%20Suzano%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1663972582894!5m2!1spt-BR!2sbr"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </figure>
+      </section>
+      
+      <section>
+        <form>
+          <h3>Entre em contato conosco</h3><br>
+          <label>Nome completo: <input type="text" name="name" placeholder="Digite seu nome completo"></label><br>        
+          <label>E-mail: <input type="email" name="email" placeholder="Digite seu e-mail"></label><br>        
+          <label>Fone ou Whatsapp: <input type="tel" name="tel" placeholder="Digite seu telefone"></label><br>        
+          <label>Cidade em que mora: <input type="text" name="city" placeholder="Digite o nome da sua cidade"></label><br>    
+          
+          <label for="state">Qual o seu estado: </label>
+          <select name="state" id="state">
+            <option value="AC">Acre (AC)</option>
+            <option value="AL">Alagoas (AL)</option>
+            <option value="AP">Amapá (AP)</option>
+            <option value="AM">Amazonas (AM)</option>
+            <option value="BA">Bahia (BA)</option>
+            <option value="CE">Ceará (CE)</option>
+            <option value="DF">Distrito Federal (DF)</option>
+            <option value="ES">Espírito Santo (ES)</option>
+            <option value="GO">Goiás (GO)</option>
+            <option value="MA">Maranhão (MA)</option>
+            <option value="MT">Mato Grosso (MT)</option>
+            <option value="MS">Mato Grosso do Sul (MS)</option>
+            <option value="MG">Minas Gerais (MG)</option>
+            <option value="PA">Pará (PA)</option>
+            <option value="PB">Paraíba (PB)</option>
+            <option value="PR">Paraná (PR)</option>
+            <option value="PE">Pernambuco (PE)</option>
+            <option value="PI">Piauí (PI)</option>
+            <option value="RJ">Rio de Janeiro (RJ)</option>
+            <option value="RN">Rio Grande do Norte (RN)</option>
+            <option value="RS">Rio Grande do Sul (RS)</option>
+            <option value="RO">Rondônia (RO)</option>
+            <option value="RR">Roraima (RR)</option>    
+            <option value="SC">Santa Catarina (SC)</option>    
+            <option value="SP">São Paulo (SP)</option>    
+            <option value="SE">Sergipe (SE)</option>    
+            <option value="TO">Tocantins (TO)</option>        
+          </select><br>                   
+          
+          <label for="blocktext">Deixe seu comentário</label><br>
+          <textarea name="blocktext" id="blocktext"></textarea><br>
+          
+          <input type="button" value="Enviar">
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <svg width="100%" height="30">
+        <rect width="100%" height="30" fill="orange" />
+      </svg>
+      <h6>Copyright @Truma-4</h6>
+      <p>Elaborado por: Anderson, Arthur, Letônio e Thiago</p>
+    </footer>
+  </body>
+</html>
