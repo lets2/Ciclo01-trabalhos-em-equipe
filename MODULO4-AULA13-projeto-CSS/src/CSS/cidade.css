@@ -131,23 +131,39 @@ header{
 }
 
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
-    STYLING MAIN MOBILE
+     MAIN MOBILE
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-*/
 #suzano{
     margin-top: 8rem;
+    background-color: var(--primary-color);
 }
 
+.wave-bottom{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
-main{
+.section-impar{
+    background-color: var(--secondary-color);
+    padding: 1rem;
+}
+
+.section-par{
     background-color: var(--primary-color);
+    padding: 1rem;
 }
 
 .resume-list{
     text-align: left;
+    padding-left: 0.5rem;
+    background-color: var(--primary-color);
 }
+
 .resume-list li{
-    margin-left: 1.8rem;
+    margin-left: 3.0rem;
 }
+
 .subtitle-cidade{
     margin-top: 1.5rem;
     margin-bottom: 1rem;
@@ -194,7 +210,7 @@ table tr th{
 
 
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
-    STYLING FOOTER MOBILE
+    FOOTER MOBILE
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-*/
 #back-to-top {
     justify-content: flex-end;
@@ -222,8 +238,6 @@ table tr th{
     }
 }
 
-
-
 #footer {
     padding: .5rem 5vw;
     border-top: hsla(0, 0%, 0%, 0.1) solid 1px;
@@ -247,12 +261,6 @@ table tr th{
     text-decoration: underline var(--text-color) .1rem;
     color: var(--text-color);
 }
-
-
-/*
-CREATE ANIMATION TO BOTTOM PAGE ARROW
-*/
-
 
 
 /* ==responsive design== */
@@ -319,11 +327,7 @@ CREATE ANIMATION TO BOTTOM PAGE ARROW
         margin-top: 8rem;
     }
 
-
-    main{
-        background-color: var(--primary-color);
-    }
-
+  
     .resume-list{
         text-align: left;
     }
@@ -340,7 +344,6 @@ CREATE ANIMATION TO BOTTOM PAGE ARROW
         font-size: 1.3rem;
     }
     
-
     .container-tables{
         display: flex;
         justify-content: center;
