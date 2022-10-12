@@ -1,291 +1,441 @@
 <!--Trabalho de HTML para o professor Rodolfo-->
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo a Suzano</title>
-</head>
-<body>
-    <header>
-        <figure>
-            <a href="https://www.suzano.sp.gov.br/web/cidade/" target="_blank">
-              <img
-                src="./src/images/BrasaoSuzano.svg"
-                alt="Brasão da Cidade de Suzano"
-                height="100"
-              />
-            </a>
-        </figure>
 
-        <svg width="100%" height="30">
-            <rect width="100%" height="30" fill="orange" />
-        </svg>
-        
-        <nav>
-            <a href="./index.html">Home</a>
-            <a href="./cidade.html">História</a>
-            <a href="./media.html">Mídias</a>
-            <a href="./contato.html">Contato</a>
-        </nav>
-        <section>
-            <input type="search" name="search" id="search" placeholder="Pesquisar">
-            <input type="button" value="pesquisar">
-        </section>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bem-vindo a Suzano</title>
+    <link rel="stylesheet" href="./src/CSS/cidade.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c86d107cf7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="container flex-row">
+            <figure>
+                <a href="https://www.suzano.sp.gov.br/web/cidade/" target="_blank">
+                </a>
+            </figure>
+            <nav id="pages-nav" class="grid-container mobile-hide">
+                <a href="./index.html">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    Home
+                </a>
+                <a href="./cidade.html">
+                    <i class="fa-solid fa-book"></i>
+                    História
+                </a>
+                <a href="./media.html">
+                    <i class="fa-solid fa-images"></i>
+                    Mídias
+                </a>
+                <a href="./contato.html">
+                    <i class="fa-solid fa-phone"></i>
+                    Contato
+                </a>
+            </nav>
+            <nav class="desktop-hide">
+                <i class="fa-solid fa-bars"></i>
+            </nav>
+            <section id="nav-search" class="mobile-hide">
+                <input type="search" name="search" id="search" placeholder="Pesquisar" />
+            </section>
+        </div>
     </header>
 
-    <main>       
-        <h2 id="suzano">SUZANO</h2>
-        <hr>
-        <h3>Sumário</h3>
-        <ul>
-            <li><a href="#historia">A história do município</a></li>
-            <ul style="list-style: disc;">
-                <li><a href="#ouro">Descoberta do ouro</a></li>
-                <li><a href="#vila">Vila de Concórdia</a></li>
-                <li><a href="#distrito">De vila a distrito</a></li>
-                <li><a href="#emancipa">A emancipação</a></li>
-                <li><a href="#comarca">A elevação a comarca</a></li>
-                
-            </ul>
-            <li><a href="#dados">Dados sobre o município</a></li>
-            
+    <main>
+        <div class="container">
+            <h2 id="suzano" class="title">SUZANO</h2>
 
-        </ul>
-        <!--ADICIONEI UM CONTEÚDO SOBRE A HISTÓRIA DA CIDADE-->
-        <section>
-            <h3 id="historia">A História do Município</h3>
-            
-            <img src="./src/images/cidade_historia_01.jpg" alt="Imagem antiga de suzano" height="400px">
-            <h4>índios e colonizadores</h4>
-            <p>Viviam no território de Suzano os <b>índios guaianás</b>. Outras tribos, de tempos em tempos, passavam por aqui. Com a chegada dos colonizadores, os índios foram expulsos e as terras, ocupadas.</p>
-            <p>Desde o século 16 já era conhecido o local onde hoje está situado o município de Suzano. Incursões à caça de índios ou de ouro já aconteciam com pessoas vindas do litoral, inicialmente de São Vicente (fundada em 1532). Depois, já com os povoados de São Paulo de Piratininga, São Miguel Paulista e Itaquaquecetuba, a região foi se tornando mais conhecida. A <b>principal atividade</b> era a agricultura.</p>      
-            <p>No primeiro documento que descreveu a área atual de Suzano, datado de 10 de dezembro de 1609, foi dada uma sesmaria a um certo "Rodrigues", que iria dos: "Campos de Ytacurubitiba no caminho que fez Gaspar Vaz que vae para Boigi Mirim a saber partindo da barra dum rio que se chama Guayao por elle arriba até dar em outro no que se chama... dali dará volta a demarcação pelas faldas do outeiro da banda do sudoeste e correrá avante até dar no rio grande Anhemby e por orio grande abaixo até dar digo até tornar aonde começou a partir a assim mas meia... com dois capões que estão de fronte da dita dada a saber um capão que se chama de Ytucurubitiva e outro... assupeva..."</p>
-            <p>"Guayao" era a grafia dada na época ao rio Guaió. Segundo historiadores, as terras ficavam entre os rios Guaió e Taiaçupeba – dois dos afluentes do rio Tietê que cortam Suzano.</p>
-            <p>Outros documentos semelhantes também descrevem Suzano. É o caso da sesmaria datada de 10 de abril de 1723, concedida a Santos Martins, cuja área ficava entre os rios Taiaçupeba Mirim e Taiaçupeba Guassu, ao sul da atual Vila Ipelândia: “de meia légua de comprido por uma de largo, no caminho que vai da dita vila (Santa Anna das Cruzes) para a de Santos, na passagem chamada Tijuco Preto”.</p>
-            <p>Em documento de delimitação da Vila de Mogi das Cruzes, primeiro núcleo populacional da região, datado de 1663, é citada a “Estrada Real do Guaió”, por onde passariam todos os que viessem do litoral ou de São Paulo em direção à vila. Essa estrada ficava ao sul da atual sede do município de Suzano, entre os rios Guaió e Taiaçupeba Mirim.</p>
+            <section class="resume-list">
+                <h3 class="subtitle">Sumário</h3>
+                <ul class="text">
+                    <li><a href="#historia">A história do município</a></li>
+                    <ul style="list-style: disc;">
+                        <li><a href="#ouro">Descoberta do ouro</a></li>
+                        <li><a href="#vila">Vila de Concórdia</a></li>
+                        <li><a href="#distrito">De vila a distrito</a></li>
+                        <li><a href="#emancipa">A emancipação</a></li>
+                        <li><a href="#comarca">A elevação a comarca</a></li>
 
-            <h4 id="ouro">Descoberta do ouro</h4>
-            <p>Na região conhecida na época como Caagaçu, na divisa entre Suzano e Ribeirão Pires, foram descobertos veios de ouro nas últimas décadas do século 17. Era ouro de aluvião, que é encontrado no leito e nos vales dos rios. A descoberta levou o governo a nomear o capitão <b>Antônio Correia de Lemos</b>, em 1699, para administrar as minas. Ele foi sucedido, em 1750, pelo capitão Bruno Neves. No final do século 18, as lavras auríferas ao sul da região teriam se esgotado, mas pesquisas históricas apontam que chegaram a ser as mais importantes da Capitania de São Vicente.</p>
-            <p>Nesse percurso da Estrada Real do Guaió, próximo à cabeceira do rio Taiaçupeba Mirim, a paragem começou a receber mais gente e se tornou um núcleo populacional conhecido por Taiaçupeba. Com o aumento da circulação de pessoas, por volta de 1720, o padre Antonio de Souza Oliveira ergueu no local a primeira capela, em honra a Nossa Senhora da Piedade.</p>  
-            <p>Tempos depois, em 20 de setembro de 1750, tomou posse como administrador da capela Antonio Frazão Meirelles. Ele registrou em um documento o que encontrou: mais de 70 itens, entre eles objetos raros de serem encontrados numa capela na época, como dois confessionários, um sino de quatro arrobas, um cálice de prata, dois castiçais de bronze e tecidos finos para a imagem de Nossa Senhora. </p>
-            <p>A busca pelo ouro atraiu cada vez mais pessoas ao entorno da <b>Capela de Nossa Senhora Piedade</b>. Na segunda metade do século 18, estabeleceu-se na região o rico e poderoso fazendeiro Antonio Francisco Baruel. Ele tinha muitos escravos, o que era uma demonstração de riqueza, e há registros de um anúncio em jornal de São Paulo, datado de 1779, em que ele pede a captura de sete escravos que teriam fugido de sua propriedade levando ouro.</p>
-            <p>Nessa época, o local, antes conhecido por Taiaçupeba, passou a ser denominado pelo sobrenome de seu mais importante proprietário, Baruel. Mesmo depois de a família ter desaparecido da região, a designação do local continuou a ser Baruel.</p>
-            <p>O povoado que vivia no Baruel continuou se desenvolvendo. Com a chegada da estrada de ferro São Paulo Railway, construída pelos ingleses, até Rio Grande (atual Rio Grande da Serra), havia a expectativa de construção de um ramal ferroviário entre a estação de Rio Grande e Jacareí, no Vale do Paraíba. Tanto que foi instalada a primeira escola da região: uma “cadeira de primeiras letras para o sexo masculino”, junto à Capela de Nossa Senhora da Piedade, em 28 de março de 1870.</p>
-            <p>A construção do ramal ferroviário até o Baruel, porém, não se concretizou. O que teve início foi a obra da ligação ferroviária entre Rio de Janeiro e São Paulo, pela Companhia Ferrocarril, em 1873. Isso provocou uma alteração radical nos rumos do desenvolvimento e do centro populacional de Suzano. Com isso, a região do Baruel se estagnou, enquanto que o crescimento da cidade voltou-se para os lados do Guaió.</p>
-            
-            <h4 id="vila">Vila de Concórdia</h4>
-            <p>O trecho ferroviário entre São Paulo e Mogi das Cruzes foi inaugurado em 6 de novembro de 1875, com uma primeira parada na região de Guaianases. Bem no centro dos oito quilômetros de ferrovia que cortam o atual território de Suzano, entre os rios Guaió e Taiaçupeba Açu, conhecido como Campos de Mirambava, foi construída uma segunda parada para o embarque de lenha, que recebeu o nome de Piedade devido à proximidade (cerca de dez quilômetros ao sul) e à importância do vilarejo de Baruel, com sua Capela de Nossa Senhora da Piedade.</p>
-            
-            <figure>
-                <img src="./src/images/cidade_historia-antonio.jpeg" alt="Retrato de Antonio Marques Figueira" height="300px">
-                <figcaption>Antonio Marques Figueira</figcaption>
-            </figure>
-            
-            <p>Junto à Parada Piedade, o jovem o português Antonio Marques Figueira, que trabalhava para a estrada de ferro, construiu sua casa, <b>a primeira</b> do local. Outros moradores se instalaram por ali. Pensando na necessidade de haver uma ocupação regular da cidade, Marques Figueira juntou-se a outros proprietários da região, como o major Francisco Pinheiro Froez, o major Guilherme Boucault e o conde João Romariz, com o objetivo de fundar uma cidade planejada e com uma estação de trem de passageiros.</p>
-            <p>Romariz desenhou, então, um projeto de arruamento, que partia da Parada Piedade, aprovado por decreto federal em agosto de 1890. A projeção já indicava um local para a construção de uma igreja, no quadrilátero entre as ruas Francisco Glicério, Benjamim Constant, Monsenhor Nuno e Felício de Camargo, o que se concretizou em 20 de janeiro de 1897, quando foi inaugurada a capela de São Sebastião (no local em que hoje está a Igreja Matriz de São Sebastião).</p>
-            
-            <figure>
-                <img src="./src/images/cidade_historia_02_capela.jpeg" alt="Capela de São Sebastião de Guaió" height="400px">
-                <figcaption>Capela de São Sebastião de Guaió</figcaption>
-            </figure>
+                    </ul>
+                    <li><a href="#dados">Dados sobre o município</a></li>
 
-            <p>"Vila da Concordia" foi o nome dado ao local, fundado em 11 de dezembro de 1890. O nome de batismo, porém, nunca se popularizou: a região continuou a ser chamada de <b>Guaió</b>, nome do rio existente no local e que formava pântanos e brejos.</p>
-            <p>Em 11 de abril de 1891, depois da encampação da Ferrocarril pela Estrada de Ferro Central do Brasil, o povo local conseguiu que, no lugar da parada, fosse inaugurada a Estação Piedade. Em 1892, a vila recebeu uma classe para meninos. E em 1894 foi inaugurado o posto telegráfico. </p>
-            <p>Entrando no século 20, a estação de madeira já mostrava sinais de sua precariedade. A comunidade que vivia em seu entorno dependia da venda de carvão, lenha e madeira e temia a desativação da estação.</p>
-            <p>Os líderes locais foram, então, solicitar ao engenheiro da Estrada de Ferro Central do Brasil, residente em Mogi das Cruzes, que construísse uma estação de alvenaria. O engenheiro <b>Joaquim Augusto Suzano Brandão</b> providenciou os estudos e autorizou a construção, descrita como feita em "alvenaria de tijolo com área de 58,91m e plataforma cimentada coberta de zinco". A plataforma servia para embarque para São Paulo, de um lado, e, de outro, para Mogi das Cruzes.</p>
-            
-            <h4 id="distrito">De vila a distrito</h4>
-            <figure>
-                <img src="./src/images/cidade_historia-suzano.jpeg" alt="Engenheiro Suzano Brandão" height="300px">
-                <figcaption>Engenheiro Suzano Brandão</figcaption>
-            </figure>
 
-            <p>Em 22 de dezembro de 1907, em homenagem ao engenheiro, <b>a estação recebeu o nome de Suzano</b> em um ato público. E em 11 de dezembro de 1908, 18 anos depois da fundação, a vila também passou a se chamar Suzano.</p>
-            <p>Um documento produzido por lideranças locais datado de 1919 informava, entre outros dados, que o vilarejo possuía 500 construções habitadas, colégio eleitoral com 50 cidadãos, distrito policial, mercado, igreja, duas escolas públicas para meninos e meninas e fazendas. Foi este documento que embasou o pedido para que a vila de Suzano fosse elevada a Distrito de Mogi das Cruzes.</p>
-            <p>Em dezembro de 1919, pela Lei Estadual nº 1.705, promulgada pelo então presidente do Estado Altino Arantes, a vila de Suzano, então com 2.707 habitantes, foi elevada a Distrito de Mogi das Cruzes. O ato oficial de instalação só veio a ocorrer efetivamente em 4 de maio de 1920, depois da nomeação, três dias antes, do subprefeito Antonio José da Costa Conceição.</p>
-            <p>A partir dos anos de 1920, com a chegada das primeiras fábricas, Suzano começou a crescer rapidamente. Instalaram-se no distrito a Vinícola Sóvis e a Sedas Maluf.</p>
-            <p>Mas a agricultura continuou a ser a principal força da economia do distrito. Milho, feijão, cana, mandioca, batata, tomate, rabanete, repolho, alface, couve, chicória e escarola estavam entre os principais produtos produzidos no distrito, que nesta época já contava com os primeiros imigrantes japoneses.</p>
-            <p>Suzano chegou a ser o maior produtor de morangos do Brasil. Os produtos seguiam para os grandes centros de trem e, depois, de caminhão, quando foi inaugurada a estrada São Paulo-Rio de Janeiro, em 1924.</p>
-            <p>Na década de 1930, a iluminação chegou ao distrito pela The São Paulo Tramway, Light and Power, a Light. E os primeiros ônibus, da empresa Nobuyohi Kodama, começaram a circular no trajeto Suzano-Palmeiras-Ouro Fino-Ribeirão Pires.</p>
-            <p>Na década de 1940, <b>Suzano contava com cerca de 6.000 moradores</b>. Este número pulou para 11.157 na década seguinte.</p>
-           
-            <h4 id="emancipa">A emancipação</h4>
-            <p>Embora a arrecadação do distrito fosse alta –chegou a ser a maior entre os distritos de Mogi no final da década de 1940–, ela não se refletia em benefícios para Suzano, que tinha muitos problemas de infraestrutura. Com a eleição de três representantes de Suzano para a Câmara de Mogi em 1947 (José da Costa Soares, Thadeu José de Moraes e Anis Fadul), iniciou-se um movimento pela emancipação político-administrativa do distrito.</p>
-            <p>Políticos, industriais, comerciantes, operários e lideranças de vários segmentos se solidarizaram à causa. Depois de um trabalhoso processo de alistamento, foi realizado um plebiscito no dia 10 de outubro de 1948, um dos requisitos para que o distrito requeresse sua autonomia. Votaram no plebiscito 1.938 eleitores, sendo que 1.925 foram favoráveis à emancipação, oito contra e um votou em branco.</p>
-            <p>Em <b>24 de dezembro</b> do mesmo ano foi promulgada a Lei Estadual nº 233, assinada pelo então governador Adhemar de Barros, com a aprovação a instalação de Suzano como município autônomo a partir de 1º de janeiro de 1949. A missão seguinte seria eleger prefeito e vereadores.</p>
-            <p>As eleições para os primeiros vereadores e prefeito foram realizadas em 13 de março de 1949. Abdo Rachid venceu o concorrente José Mariano de Souza Coutinho Júnior. Os primeiros 13 vereadores eleitos e empossados no município, na mesma data, foram: Alberto Nunes Martins, Anis Fadul, Antônio José Pereira, Antônio Rachid, Benedito Gonçalves Pereira, Firmino José da Costa, Francisco Marques Figueira, José Adelino Moreira de Azevedo, José Gonçalves Capela, Paulo Magário, Pedro Nakamura, Thadeu José de Moraes e Yoshikawa Masayuki.</p>
-            <p>A cerimônia de posse foi realizada no antigo Cine Suzano, na Praça João Pessoa, no dia 2 de abril de 1949. A data foi definida posteriormente para as comemorações de aniversário da cidade.</p>
+                </ul>
+            </section>
+            <!--ADICIONEI UM CONTEÚDO SOBRE A HISTÓRIA DA CIDADE-->
+            <section>
+                <h3 id="historia" class="title">A História do Município</h3>
 
-            <h4 id="comarca">A elevação a comarca</h4>
-            <p>Depois de conquistada a emancipação e realizadas as eleições, o desafio seguinte foi elevar Suzano a comarca, o que representa a <b>independência no Poder Judiciário</b>. O pleito, iniciado em 1957 pelos vereadores João Antônio Módolo e Herculano Américo Pero e pelo prefeito João Alves Machado, foi acolhido pelos deputados estaduais Paulo Teixeira de Camargo e Blota Júnior. O projeto de lei foi aprovado pela Assembleia Legislativa e transformado na Lei Estadual nº 5.285, sancionada em 31 de dezembro de 1958.</p>
-            <p>A promulgação veio em <b>18 de fevereiro de 1959</b>, pelo governador Jânio da Silva Quadros. A instalação da Comarca só foi realizada em 25 de maio de 1962. O primeiro juiz titular foi José Dourador e o primeiro promotor, Benedito José Barreto Fonseca.</p>
-            <p>Baseado nos livros “Suzano Estrada Real”, de Suami de Paula Azevedo, e “Memórias de Suzano – Histórias e fotos de todos os tempos, do vilarejo a cidade grande”, de Simone Leone, Carla Fiamini, Douglas Pires e Gisleine Zarbietti.</p>
-            <p>A grafia Susano foi dada pela lei estadual nº 8.092/1964. A correção para Suzano, em face do parecer nº 345/1984, da Procuradoria Geral do IBGE, foi dada pela lei estadual nº 7.810/1992.</p>
-            <p>Para mais informações consulte o site da Câmara de Suzano (<a href="http://www.camarasuzano.sp.gov.br/historiasuzano/" target="_blank">Aqui!</a>)</p>
-        </section>
-        <!--Dados do município-->
-        <section>
-            <h3 id="dados">Dados sobre o município</h3>
-            <figure>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d278208.3549536655!2d-46.468946026005895!3d-23.626509122358605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce7176a5cf4309%3A0x7678f276a368e6e2!2sSuzano%20-%20Palmeiras%20de%20S%C3%A3o%20Paulo%2C%20Suzano%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1663972582894!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <figcaption>Suzano-SP(Fonte:Google Maps)</figcaption>
-            </figure>
-            <p>O município de Suzano, que hoje conta com 206 quilômetros quadrados, está localizado na região do Alto Tietê, entre a zona leste da Grande São Paulo e o Vale do Paraíba. Faz divisa com os municípios de Itaquaquecetuba a norte, Mogi das Cruzes a leste, Santo André a sul, Rio Grande da Serra e Ribeirão Pires a sudoeste, Ferraz de Vasconcelos a oeste e Poá a noroeste.</p>
-            <p>O aniversário da cidade é no dia 2 de abril, o gentílico é suzanense e o atual prefeito da cidade é Rodrigo Kenji de Souza Ashiuchi</p>
-            <p>As Tabelas abaixo contém dados extraídos do Instituto Brasileiro de Geografia e Estatística(IBGE):</p>
-            <!--TABELAS-->
-            <table style="border: 2px solid red;padding: 10px;margin:10px">
-                <tr style="background-color: blue;">
-                    <th colspan="2">POPULAÇÃO</th>
-                </tr>
-                <tr>
-                    <td>População estimada [2021]</td>
-                    <td>303.397</td>
-                </tr>
-                <tr>
-                    <td>População [2010]</td>
-                    <td>262.480</td>
-                </tr>
-                <tr>
-                    <td>Densidade demográfica [2010]</td>
-                    <td>1.272,93 hab/km2</td>
-                </tr>
-            </table>
-            <table style="border: 2px solid red;padding: 10px;margin:10px">
-                <tr style="background-color: blue;">
-                    <th colspan="2">TRABALHO E RENDIMENTO</th>
-                </tr>
-                <tr>
-                    <td>Salário médio mensal dos trabalhadores formais [2020]</td>
-                    <td>2,6 salários mínimos</td>
-                </tr>
-                <tr>
-                    <td>Pessoal ocupado [2020]</td>
-                    <td>77.049</td>
-                </tr>
-                <tr>
-                    <td>População ocupada [2020]</td>
-                    <td>25,6%</td>
-                </tr>
-            </table>
+                <img class="image-landscape" src="./src/images/cidade_historia_01.PNG" alt="Imagem antiga de suzano">
+                <h4 class="subtitle subtitle-cidade">Índios e colonizadores</h4>
+                <p class="text">Viviam no território de Suzano os <b> <a class="link-text-history" href="https://pt.wikipedia.org/wiki/Guaian%C3%A1s" target="_blank">índios guaianás</a></b>. Outras tribos, de tempos em tempos,
+                    passavam por aqui. Com a chegada dos colonizadores, os índios foram expulsos e as terras, ocupadas.
+                </p>
+                <p class="text">Desde o século 16 já era conhecido o local onde hoje está situado o município de Suzano. Incursões à
+                    caça de índios ou de ouro já aconteciam com pessoas vindas do litoral, inicialmente de São Vicente
+                    (fundada em 1532). Depois, já com os povoados de São Paulo de Piratininga, São Miguel Paulista e
+                    Itaquaquecetuba, a região foi se tornando mais conhecida. A <b>principal atividade</b> era a
+                    agricultura.</p>
+                <p class="text">No primeiro documento que descreveu a área atual de Suzano, datado de 10 de dezembro de 1609, foi
+                    dada uma sesmaria a um certo "Rodrigues", que iria dos: "Campos de Ytacurubitiba no caminho que fez
+                    Gaspar Vaz que vae para Boigi Mirim a saber partindo da barra dum rio que se chama Guayao por elle
+                    arriba até dar em outro no que se chama... dali dará volta a demarcação pelas faldas do outeiro da
+                    banda do sudoeste e correrá avante até dar no rio grande Anhemby e por orio grande abaixo até dar
+                    digo até tornar aonde começou a partir a assim mas meia... com dois capões que estão de fronte da
+                    dita dada a saber um capão que se chama de Ytucurubitiva e outro... assupeva..."</p>
+                <p class="text">"Guayao" era a grafia dada na época ao rio Guaió. Segundo historiadores, as terras ficavam entre os
+                    rios Guaió e Taiaçupeba – dois dos afluentes do rio Tietê que cortam Suzano.</p>
+                <p class="text">Outros documentos semelhantes também descrevem Suzano. É o caso da sesmaria datada de 10 de abril de
+                    1723, concedida a Santos Martins, cuja área ficava entre os rios Taiaçupeba Mirim e Taiaçupeba
+                    Guassu, ao sul da atual Vila Ipelândia: “de meia légua de comprido por uma de largo, no caminho que
+                    vai da dita vila (Santa Anna das Cruzes) para a de Santos, na passagem chamada Tijuco Preto”.</p>
+                <p class="text">Em documento de delimitação da Vila de Mogi das Cruzes, primeiro núcleo populacional da região,
+                    datado de 1663, é citada a “Estrada Real do Guaió”, por onde passariam todos os que viessem do
+                    litoral ou de São Paulo em direção à vila. Essa estrada ficava ao sul da atual sede do município de
+                    Suzano, entre os rios Guaió e Taiaçupeba Mirim.</p>
 
-            <table style="border: 2px solid red;padding: 10px;margin:10px">
-                <tr style="background-color: blue;">
-                    <th colspan="2">EDUCAÇÃO</th>
-                </tr>
-                <tr>
-                    <td>Taxa de escolarização de 6 a 14 anos [2010]</td>
-                    <td>96,7%</td>
-                </tr>
-                <tr>
-                    <td>Matrículas no ensino fundamental [2021]</td>
-                    <td>43.221</td>
-                </tr>
-                <tr>
-                    <td>IDEB - Anos finais do ensino fundamental [2019]</td>
-                    <td>5,2</td>
-                </tr>
-                <tr>
-                    <td>Matrículas no ensino médio [2021]</td>
-                    <td>14.335</td>
-                </tr>
-                <tr>
-                    <td>Número de estabelecimentos de ensino fundamental [2021]</td>
-                    <td>102</td>
-                </tr>
-                <tr>
-                    <td>Número de estabelecimentos de ensino médio [2021]</td>
-                    <td>40</td>
-                </tr>
-            </table>
+                <h4 id="ouro" class="subtitle">Descoberta do ouro</h4>
+                <p class="text">Na região conhecida na época como Caagaçu, na divisa entre Suzano e Ribeirão Pires, foram descobertos
+                    veios de ouro nas últimas décadas do século 17. Era ouro de aluvião, que é encontrado no leito e nos
+                    vales dos rios. A descoberta levou o governo a nomear o capitão <b><a class="link-text-history" href="http://www.camarasuzano.sp.gov.br/historiasuzano/" target="_blank" rel="noopener noreferrer">Antônio Correia de Lemos</a></b>, em
+                    1699, para administrar as minas. Ele foi sucedido, em 1750, pelo capitão Bruno Neves. No final do
+                    século 18, as lavras auríferas ao sul da região teriam se esgotado, mas pesquisas históricas apontam
+                    que chegaram a ser as mais importantes da Capitania de São Vicente.</p>
+                <p class="text">Nesse percurso da Estrada Real do Guaió, próximo à cabeceira do rio Taiaçupeba Mirim, a paragem
+                    começou a receber mais gente e se tornou um núcleo populacional conhecido por Taiaçupeba. Com o
+                    aumento da circulação de pessoas, por volta de 1720, o padre Antonio de Souza Oliveira ergueu no
+                    local a primeira capela, em honra a Nossa Senhora da Piedade.</p>
+                <p class="text">Tempos depois, em 20 de setembro de 1750, tomou posse como administrador da capela Antonio Frazão
+                    Meirelles. Ele registrou em um documento o que encontrou: mais de 70 itens, entre eles objetos raros
+                    de serem encontrados numa capela na época, como dois confessionários, um sino de quatro arrobas, um
+                    cálice de prata, dois castiçais de bronze e tecidos finos para a imagem de Nossa Senhora. </p>
+                <p class="text">A busca pelo ouro atraiu cada vez mais pessoas ao entorno da <b> <a  class="link-text-history" href="https://g1.globo.com/sp/mogi-das-cruzes-suzano/noticia/2022/04/13/compac-de-suzano-inicia-estudos-para-tombamento-da-capela-nossa-senhora-da-piedade-conhecida-como-igreja-do-baruel.ghtml" target="_blank" rel="noopener noreferrer">Capela de Nossa Senhora Piedade</a></b>.
+                    Na segunda metade do século 18, estabeleceu-se na região o rico e poderoso fazendeiro Antonio
+                    Francisco Baruel. Ele tinha muitos escravos, o que era uma demonstração de riqueza, e há registros
+                    de um anúncio em jornal de São Paulo, datado de 1779, em que ele pede a captura de sete escravos que
+                    teriam fugido de sua propriedade levando ouro.</p>
+                <p class="text">Nessa época, o local, antes conhecido por Taiaçupeba, passou a ser denominado pelo sobrenome de seu
+                    mais importante proprietário, Baruel. Mesmo depois de a família ter desaparecido da região, a
+                    designação do local continuou a ser Baruel.</p>
+                <p class="text">O povoado que vivia no Baruel continuou se desenvolvendo. Com a chegada da estrada de ferro São Paulo
+                    Railway, construída pelos ingleses, até Rio Grande (atual Rio Grande da Serra), havia a expectativa
+                    de construção de um ramal ferroviário entre a estação de Rio Grande e Jacareí, no Vale do Paraíba.
+                    Tanto que foi instalada a primeira escola da região: uma “cadeira de primeiras letras para o sexo
+                    masculino”, junto à Capela de Nossa Senhora da Piedade, em 28 de março de 1870.</p>
+                <p class="text">A construção do ramal ferroviário até o Baruel, porém, não se concretizou. O que teve início foi a
+                    obra da ligação ferroviária entre Rio de Janeiro e São Paulo, pela Companhia Ferrocarril, em 1873.
+                    Isso provocou uma alteração radical nos rumos do desenvolvimento e do centro populacional de Suzano.
+                    Com isso, a região do Baruel se estagnou, enquanto que o crescimento da cidade voltou-se para os
+                    lados do Guaió.</p>
 
-            <table style="border: 2px solid red;padding: 10px;margin:10px">
-                <tr style="background-color: blue;">
-                    <th colspan="2">ECONOMIA</th>
-                </tr>
-                <tr>
-                    <td>PIB per capita [2019]</td>
-                    <td>R$40.453,09</td>
-                </tr>
-                <tr>
-                    <td>IDHM [2010]</td>
-                    <td>0,765</td>
-                </tr>
-                <tr>
-                    <td>Percentual de receitas oriundas de fontes externas [2017]</td>
-                    <td>64,4%</td>
-                </tr>
-            </table>
+                <h4 id="vila" class="subtitle">Vila de Concórdia</h4>
+                <p class="text">O trecho ferroviário entre São Paulo e Mogi das Cruzes foi inaugurado em 6 de novembro de 1875, com
+                    uma primeira parada na região de Guaianases. Bem no centro dos oito quilômetros de ferrovia que
+                    cortam o atual território de Suzano, entre os rios Guaió e Taiaçupeba Açu, conhecido como Campos de
+                    Mirambava, foi construída uma segunda parada para o embarque de lenha, que recebeu o nome de Piedade
+                    devido à proximidade (cerca de dez quilômetros ao sul) e à importância do vilarejo de Baruel, com
+                    sua Capela de Nossa Senhora da Piedade.</p>
 
-            <table style="border: 2px solid red;padding: 10px;margin:10px">
-                <tr style="background-color: blue;">
-                    <th colspan="2">SAÚDE</th>
-                </tr>
-                <tr>
-                    <td>Mortalidade Infantil [2020]</td>
-                    <td>10,52 óbitos/mil nascidos vivos</td>
-                </tr>
-                <tr>
-                    <td>Internações por diarreia [2016]</td>
-                    <td>0,1 internações/mil hab.</td>
-                </tr>
-                <tr>
-                    <td>Estabelecimentos de Saúde SUS [2009]</td>
-                    <td>24</td>
-                </tr>
-            </table>
-            <!--TERRITORIO E AMBIENTE-->
-            <table style="border: 2px solid red;padding: 10px;margin:10px">
-                <tr style="background-color: blue;">
-                    <th colspan="2">TERRITÓRIO E AMBIENTE</th>
-                </tr>
-                <tr>
-                    <td>Área territorial [2021]</td>
-                    <td>206,236 km2</td>
-                </tr>
-                <tr>
-                    <td>Esgotamento sanitário adequado [2010]</td>
-                    <td>89,7%</td>
-                </tr>
-                <tr>
-                    <td>Urbanização de vias públicas [2010]</td>
-                    <td>31,1%</td>
-                </tr>
-                <tr>
-                    <td>Bioma [2019]</td>
-                    <td>Mata Atlântica</td>
-                </tr>
-                <tr>
-                    <td>Mesorregião [2021]</td>
-                    <td>Metropolitana de SP</td>
-                </tr>
-                <tr>
-                    <td>Microrregião [2021]</td>
-                    <td>Mogi das Cruzes</td>
-                </tr>
-                
-            </table>
-            <p>Abaixo é apresentada a pirâmide etária de Suzano (IBGE, 2010):</p>
-            <!--PIRAMIDE ETÁRIA 2010-->
-            <figure>
-                <img src="./src/images/cidade_dados_piramide.png" alt="Pirâmide Etária de Suzano">
-                <figcaption>Pirâmide Etária (Fonte: IBGE, 2010)</figcaption>
-            </figure>
+                <figure>
+                    <img class="image-portrait" src="./src/images/cidade_historia-antonio.jpeg" alt="Retrato de Antonio Marques Figueira">
+                    <figcaption class="legend-image">Antonio Marques Figueira</figcaption>
+                </figure>
 
-        </section>
-        
-        <p><a href="#suzano">Ir para o topo dessa página</a></p>     
-        
+                <p class="text">Junto à Parada Piedade, o jovem o português Antonio Marques Figueira, que trabalhava para a estrada
+                    de ferro, construiu sua casa, <b>a primeira</b> do local. Outros moradores se instalaram por ali.
+                    Pensando na necessidade de haver uma ocupação regular da cidade, Marques Figueira juntou-se a outros
+                    proprietários da região, como o major Francisco Pinheiro Froez, o major Guilherme Boucault e o conde
+                    João Romariz, com o objetivo de fundar uma cidade planejada e com uma estação de trem de
+                    passageiros.</p>
+                <p class="text">Romariz desenhou, então, um projeto de arruamento, que partia da Parada Piedade, aprovado por decreto
+                    federal em agosto de 1890. A projeção já indicava um local para a construção de uma igreja, no
+                    quadrilátero entre as ruas Francisco Glicério, Benjamim Constant, Monsenhor Nuno e Felício de
+                    Camargo, o que se concretizou em 20 de janeiro de 1897, quando foi inaugurada a capela de São
+                    Sebastião (no local em que hoje está a Igreja Matriz de São Sebastião).</p>
+
+                <figure>
+                    <img class="image-landscape" src="./src/images/cidade_historia_02_capela.jpeg" alt="Capela de São Sebastião de Guaió">
+                    <figcaption class="legend-image">Capela de São Sebastião de Guaió</figcaption>
+                </figure>
+
+                <p class="text">"Vila da Concordia" foi o nome dado ao local, fundado em 11 de dezembro de 1890. O nome de batismo,
+                    porém, nunca se popularizou: a região continuou a ser chamada de <b>Guaió</b>, nome do rio existente
+                    no local e que formava pântanos e brejos.</p>
+                <p class="text">Em 11 de abril de 1891, depois da encampação da Ferrocarril pela Estrada de Ferro Central do Brasil,
+                    o povo local conseguiu que, no lugar da parada, fosse inaugurada a Estação Piedade. Em 1892, a vila
+                    recebeu uma classe para meninos. E em 1894 foi inaugurado o posto telegráfico. </p>
+                <p class="text">Entrando no século 20, a estação de madeira já mostrava sinais de sua precariedade. A comunidade que
+                    vivia em seu entorno dependia da venda de carvão, lenha e madeira e temia a desativação da estação.
+                </p>
+                <p class="text">Os líderes locais foram, então, solicitar ao engenheiro da Estrada de Ferro Central do Brasil,
+                    residente em Mogi das Cruzes, que construísse uma estação de alvenaria. O engenheiro <b><a class="link-text-history" href="https://www.suzano.sp.gov.br/web/cidade/historia/" target="_blank" rel="noopener noreferrer">Joaquim Augusto Suzano Brandão</a></b> providenciou os estudos e autorizou a construção, descrita como feita
+                    em "alvenaria de tijolo com área de 58,91m e plataforma cimentada coberta de zinco". A plataforma
+                    servia para embarque para São Paulo, de um lado, e, de outro, para Mogi das Cruzes.</p>
+
+                <h4 id="distrito" class="subtitle">De vila a distrito</h4>
+                <figure>
+                    <img class="image-portrait" src="./src/images/cidade_historia-suzano.jpeg" alt="Engenheiro Suzano Brandão">
+                    <figcaption class="legend-image">Engenheiro Suzano Brandão</figcaption>
+                </figure>
+
+                <p class="text">Em 22 de dezembro de 1907, em homenagem ao engenheiro, <b>a estação recebeu o nome de Suzano</b> em
+                    um ato público. E em 11 de dezembro de 1908, 18 anos depois da fundação, a vila também passou a se
+                    chamar Suzano.</p>
+                <p class="text">Um documento produzido por lideranças locais datado de 1919 informava, entre outros dados, que o
+                    vilarejo possuía 500 construções habitadas, colégio eleitoral com 50 cidadãos, distrito policial,
+                    mercado, igreja, duas escolas públicas para meninos e meninas e fazendas. Foi este documento que
+                    embasou o pedido para que a vila de Suzano fosse elevada a Distrito de Mogi das Cruzes.</p>
+                <p class="text">Em dezembro de 1919, pela Lei Estadual nº 1.705, promulgada pelo então presidente do Estado Altino
+                    Arantes, a vila de Suzano, então com 2.707 habitantes, foi elevada a Distrito de Mogi das Cruzes. O
+                    ato oficial de instalação só veio a ocorrer efetivamente em 4 de maio de 1920, depois da nomeação,
+                    três dias antes, do subprefeito Antonio José da Costa Conceição.</p>
+                <p class="text">A partir dos anos de 1920, com a chegada das primeiras fábricas, Suzano começou a crescer
+                    rapidamente. Instalaram-se no distrito a Vinícola Sóvis e a Sedas Maluf.</p>
+                <p class="text">Mas a agricultura continuou a ser a principal força da economia do distrito. Milho, feijão, cana,
+                    mandioca, batata, tomate, rabanete, repolho, alface, couve, chicória e escarola estavam entre os
+                    principais produtos produzidos no distrito, que nesta época já contava com os primeiros imigrantes
+                    japoneses.</p>
+                <p class="text">Suzano chegou a ser o maior produtor de morangos do Brasil. Os produtos seguiam para os grandes
+                    centros de trem e, depois, de caminhão, quando foi inaugurada a estrada São Paulo-Rio de Janeiro, em
+                    1924.</p>
+                <p class="text">Na década de 1930, a iluminação chegou ao distrito pela The São Paulo Tramway, Light and Power, a
+                    Light. E os primeiros ônibus, da empresa Nobuyohi Kodama, começaram a circular no trajeto
+                    Suzano-Palmeiras-Ouro Fino-Ribeirão Pires.</p>
+                <p class="text">Na década de 1940, <b>Suzano contava com cerca de 6.000 moradores</b>. Este número pulou para 11.157
+                    na década seguinte.</p>
+
+                <h4 id="emancipa" class="subtitle">A emancipação</h4>
+                <p class="text">Embora a arrecadação do distrito fosse alta –chegou a ser a maior entre os distritos de Mogi no final
+                    da década de 1940–, ela não se refletia em benefícios para Suzano, que tinha muitos problemas de
+                    infraestrutura. Com a eleição de três representantes de Suzano para a Câmara de Mogi em 1947 (José
+                    da Costa Soares, Thadeu José de Moraes e Anis Fadul), iniciou-se um movimento pela emancipação
+                    político-administrativa do distrito.</p>
+                <p class="text">Políticos, industriais, comerciantes, operários e lideranças de vários segmentos se solidarizaram à
+                    causa. Depois de um trabalhoso processo de alistamento, foi realizado um plebiscito no dia 10 de
+                    outubro de 1948, um dos requisitos para que o distrito requeresse sua autonomia. Votaram no
+                    plebiscito 1.938 eleitores, sendo que 1.925 foram favoráveis à emancipação, oito contra e um votou
+                    em branco.</p>
+                <p class="text">Em <b>24 de dezembro</b> do mesmo ano foi promulgada a Lei Estadual nº 233, assinada pelo então
+                    governador Adhemar de Barros, com a aprovação a instalação de Suzano como município autônomo a
+                    partir de 1º de janeiro de 1949. A missão seguinte seria eleger prefeito e vereadores.</p>
+                <p class="text">As eleições para os primeiros vereadores e prefeito foram realizadas em 13 de março de 1949. Abdo
+                    Rachid venceu o concorrente José Mariano de Souza Coutinho Júnior. Os primeiros 13 vereadores
+                    eleitos e empossados no município, na mesma data, foram: Alberto Nunes Martins, Anis Fadul, Antônio
+                    José Pereira, Antônio Rachid, Benedito Gonçalves Pereira, Firmino José da Costa, Francisco Marques
+                    Figueira, José Adelino Moreira de Azevedo, José Gonçalves Capela, Paulo Magário, Pedro Nakamura,
+                    Thadeu José de Moraes e Yoshikawa Masayuki.</p>
+                <p class="text">A cerimônia de posse foi realizada no antigo Cine Suzano, na Praça João Pessoa, no dia 2 de abril de
+                    1949. A data foi definida posteriormente para as comemorações de aniversário da cidade.</p>
+
+                <h4 id="comarca" class="subtitle">A elevação a comarca</h4>
+                <p class="text">Depois de conquistada a emancipação e realizadas as eleições, o desafio seguinte foi elevar Suzano a
+                    comarca, o que representa a <b>independência no Poder Judiciário</b>. O pleito, iniciado em 1957
+                    pelos vereadores João Antônio Módolo e Herculano Américo Pero e pelo prefeito João Alves Machado,
+                    foi acolhido pelos deputados estaduais Paulo Teixeira de Camargo e Blota Júnior. O projeto de lei
+                    foi aprovado pela Assembleia Legislativa e transformado na Lei Estadual nº 5.285, sancionada em 31
+                    de dezembro de 1958.</p>
+                <p class="text">A promulgação veio em <b>18 de fevereiro de 1959</b>, pelo governador Jânio da Silva Quadros. A
+                    instalação da Comarca só foi realizada em 25 de maio de 1962. O primeiro juiz titular foi José
+                    Dourador e o primeiro promotor, Benedito José Barreto Fonseca.</p>
+                <p class="text">Baseado nos livros “Suzano Estrada Real”, de Suami de Paula Azevedo, e “Memórias de Suzano –
+                    Histórias e fotos de todos os tempos, do vilarejo a cidade grande”, de Simone Leone, Carla Fiamini,
+                    Douglas Pires e Gisleine Zarbietti.</p>
+                <p class="text">A grafia Susano foi dada pela lei estadual nº 8.092/1964. A correção para Suzano, em face do parecer
+                    nº 345/1984, da Procuradoria Geral do IBGE, foi dada pela lei estadual nº 7.810/1992.</p>
+                <p class="text">Para mais informações consulte o <b><a class="link-text-history" href="http://www.camarasuzano.sp.gov.br/historiasuzano/" target="_blank">site da Câmara de Suzano</a></b>.</p>
+            </section>
+            <!--Dados do município-->
+            <section>
+                <h3 id="dados" class="title">Dados sobre o município</h3>
+                <figure>
+                    <iframe class="image-landscape"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d278208.3549536655!2d-46.468946026005895!3d-23.626509122358605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce7176a5cf4309%3A0x7678f276a368e6e2!2sSuzano%20-%20Palmeiras%20de%20S%C3%A3o%20Paulo%2C%20Suzano%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1663972582894!5m2!1spt-BR!2sbr"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <figcaption class="legend-image">Suzano-SP (Fonte:Google Maps)</figcaption>
+                </figure>
+                <p class="text">O município de Suzano, que hoje conta com 206 quilômetros quadrados, está localizado na região do
+                    Alto Tietê, entre a zona leste da Grande São Paulo e o Vale do Paraíba. Faz divisa com os municípios
+                    de Itaquaquecetuba a norte, Mogi das Cruzes a leste, Santo André a sul, Rio Grande da Serra e
+                    Ribeirão Pires a sudoeste, Ferraz de Vasconcelos a oeste e Poá a noroeste.</p>
+                <p class="text">O aniversário da cidade é no dia 2 de abril, o gentílico é suzanense e o atual prefeito da cidade é
+                    Rodrigo Kenji de Souza Ashiuchi</p>
+                <p class="text">As Tabelas abaixo contém dados extraídos do Instituto Brasileiro de Geografia e Estatística (IBGE):
+                </p>
+                <!--TABELAS-->
+                <div class="container-tables">
+                    <!--POPULAÇÃO-->
+                    <table>
+                        <tr>
+                            <th colspan="2">POPULAÇÃO</th>
+                        </tr>
+                        <tr>
+                            <td>População estimada [2021]</td>
+                            <td>303.397</td>
+                        </tr>
+                        <tr>
+                            <td>População [2010]</td>
+                            <td>262.480</td>
+                        </tr>
+                        <tr>
+                            <td>Densidade demográfica [2010]</td>
+                            <td>1.272,93 hab/km2</td>
+                        </tr>
+                    </table>
+                    <!--TRABALHO E RENDIMENTO-->
+                    <table>
+                        <tr>
+                            <th colspan="2">TRABALHO E RENDIMENTO</th>
+                        </tr>
+                        <tr>
+                            <td>Salário médio mensal dos trabalhadores formais [2020]</td>
+                            <td>2,6 salários mínimos</td>
+                        </tr>
+                        <tr>
+                            <td>Pessoal ocupado [2020]</td>
+                            <td>77.049</td>
+                        </tr>
+                        <tr>
+                            <td>População ocupada [2020]</td>
+                            <td>25,6%</td>
+                        </tr>
+                    </table>
+                    <!--EDUCAÇÃO-->
+                    <table>
+                        <tr>
+                            <th colspan="2">EDUCAÇÃO</th>
+                        </tr>
+                        <tr>
+                            <td>Taxa de escolarização de 6 a 14 anos [2010]</td>
+                            <td>96,7%</td>
+                        </tr>
+                        <tr>
+                            <td>Matrículas no ensino fundamental [2021]</td>
+                            <td>43.221</td>
+                        </tr>
+                        <tr>
+                            <td>IDEB - Anos finais do ensino fundamental [2019]</td>
+                            <td>5,2</td>
+                        </tr>
+                        <tr>
+                            <td>Matrículas no ensino médio [2021]</td>
+                            <td>14.335</td>
+                        </tr>
+                        <tr>
+                            <td>Número de estabelecimentos de ensino fundamental [2021]</td>
+                            <td>102</td>
+                        </tr>
+                        <tr>
+                            <td>Número de estabelecimentos de ensino médio [2021]</td>
+                            <td>40</td>
+                        </tr>
+                    </table>
+                    <!--ECONOMIA-->
+                    <table>
+                        <tr>
+                            <th colspan="2">ECONOMIA</th>
+                        </tr>
+                        <tr>
+                            <td>PIB per capita [2019]</td>
+                            <td>R$40.453,09</td>
+                        </tr>
+                        <tr>
+                            <td>IDHM [2010]</td>
+                            <td>0,765</td>
+                        </tr>
+                        <tr>
+                            <td>Percentual de receitas oriundas de fontes externas [2017]</td>
+                            <td>64,4%</td>
+                        </tr>
+                    </table>
+                    <!--SAÚDE-->
+                    <table>
+                        <tr>
+                            <th colspan="2">SAÚDE</th>
+                        </tr>
+                        <tr>
+                            <td>Mortalidade Infantil [2020]</td>
+                            <td>10,52 óbitos/mil nascidos vivos</td>
+                        </tr>
+                        <tr>
+                            <td>Internações por diarreia [2016]</td>
+                            <td>0,1 internações/mil hab.</td>
+                        </tr>
+                        <tr>
+                            <td>Estabelecimentos de Saúde SUS [2009]</td>
+                            <td>24</td>
+                        </tr>
+                    </table>
+                    <!--TERRITORIO E AMBIENTE-->
+                    <table>
+                        <tr>
+                            <th colspan="2">TERRITÓRIO E AMBIENTE</th>
+                        </tr>
+                        <tr>
+                            <td>Área territorial [2021]</td>
+                            <td>206,236 km2</td>
+                        </tr>
+                        <tr>
+                            <td>Esgotamento sanitário adequado [2010]</td>
+                            <td>89,7%</td>
+                        </tr>
+                        <tr>
+                            <td>Urbanização de vias públicas [2010]</td>
+                            <td>31,1%</td>
+                        </tr>
+                        <tr>
+                            <td>Bioma [2019]</td>
+                            <td>Mata Atlântica</td>
+                        </tr>
+                        <tr>
+                            <td>Mesorregião [2021]</td>
+                            <td>Metropolitana de SP</td>
+                        </tr>
+                        <tr>
+                            <td>Microrregião [2021]</td>
+                            <td>Mogi das Cruzes</td>
+                        </tr>
+    
+                    </table>
+    
+                </div>
+
+                <p class="text">Abaixo é apresentada a pirâmide etária de Suzano (IBGE, 2010):</p>
+                <!--PIRAMIDE ETÁRIA 2010-->
+                <figure>
+                    <img class="image-landscape" src="./src/images/cidade_dados_piramide.png" alt="Pirâmide Etária de Suzano">
+                    <figcaption class="legend-image">Pirâmide Etária (Fonte: IBGE, 2010)</figcaption>
+                </figure>
+
+            </section>
+
+        </div>
+        <div id="back-to-top" class="flex-row container">
+			<div>
+				<a href="#suzano"></a>
+			</div>
+		</div>
+
     </main>
 
-    <footer>
-        <svg width="100%" height="30">
-            <rect width="100%" height="30" fill="orange" />
-        </svg>
-        <h6>Copyright @Truma-4</h6>
-        <p>Elaborado por: Anderson, Arthur, Letônio e Thiago</p>
+    <footer class="container flex-row" id="footer">
+        <p class="text"> <span id="copyright"> Copyright © 2022 - Hopper</span> <span class="mobile-hide">|</span>
+            Developed by
+            <a href="https://github.com/andersondaalpha" target="_blank">Anderson</a>, <a
+                href="https://github.com/arthurMancioSales" target="_blank">Arthur</a>, <a
+                href="https://github.com/arthurMancioSales" target="_blank">Letônio</a> and <a
+                href="https://github.com/ThiagoOitaven" target="_blank">Thiago</a>
+        </p>
     </footer>
 </body>
+
 </html>

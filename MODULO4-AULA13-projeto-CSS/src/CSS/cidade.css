@@ -7,7 +7,9 @@ font-family: 'Poppins', sans-serif; */
     padding: 0;
     box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 /* ==declaring variables== */
 :root {
     font-size: 10px;
@@ -98,7 +100,6 @@ a:active {
 header{
     width: 100%;
 }
-
 #header div.container {
     justify-content: space-between;
 }
@@ -129,7 +130,72 @@ header{
     scale: 200%;
 }
 
-/* ==footer== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+    STYLING MAIN MOBILE
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-*/
+#suzano{
+    margin-top: 8rem;
+}
+
+
+main{
+    background-color: var(--primary-color);
+}
+
+.resume-list{
+    text-align: left;
+}
+.resume-list li{
+    margin-left: 1.8rem;
+}
+.subtitle-cidade{
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    
+}
+
+.legend-image{
+    font-size: 1.1rem;
+    font-family: 'Libre Franklin', sans-serif;
+}
+.image-landscape{
+    margin-top: 0.2rem;
+    max-width: 60rem;
+    width:80vw;
+}
+
+.image-portrait{
+    margin-top: 0.2rem;
+    height: 30rem;
+}
+figcaption{
+    margin-bottom: 0.2rem;
+}
+.container-tables{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+table{
+    border: 0.2rem solid var(--main-color) ;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    margin:1rem;
+    font-size: 1.3rem;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 400;
+}
+table tr{
+    padding: 0px;
+}
+table tr th{
+    background-color: var(--main-color);
+}
+
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+    STYLING FOOTER MOBILE
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-*/
 #back-to-top {
     justify-content: flex-end;
 }
@@ -143,7 +209,20 @@ header{
     background-image: url(../images/arrow-up-solid.svg);
     background-repeat: no-repeat;
     background-position: 50% 0;
+    animation: arrow_move 1s ease-in-out alternate infinite;
 }
+/*ANIMATION TO BOTTOM PAGE ARROW*/
+@keyframes arrow_move{
+    0%{
+        transform: translateY(0rem);
+    }
+    100%{
+  
+        transform: translateY(-2rem);
+    }
+}
+
+
 
 #footer {
     padding: .5rem 5vw;
@@ -168,6 +247,13 @@ header{
     text-decoration: underline var(--text-color) .1rem;
     color: var(--text-color);
 }
+
+
+/*
+CREATE ANIMATION TO BOTTOM PAGE ARROW
+*/
+
+
 
 /* ==responsive design== */
 @media screen and (min-width: 810px) {
@@ -224,6 +310,44 @@ header{
         background-position: 95% 50%;
 
         border-radius: 1rem;
+    }
+
+    /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+    STYLING MAIN DESKTOP
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-*/
+    #suzano{
+        margin-top: 8rem;
+    }
+
+
+    main{
+        background-color: var(--primary-color);
+    }
+
+    .resume-list{
+        text-align: left;
+    }
+    .subtitle-cidade{
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        
+    }
+
+    .link-text-history{
+        font-size: 1.8rem ;
+    }
+    .legend-image{
+        font-size: 1.3rem;
+    }
+    
+
+    .container-tables{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    table{
+        font-size: 1.8rem;
     }
 
     /* ==footer== */
