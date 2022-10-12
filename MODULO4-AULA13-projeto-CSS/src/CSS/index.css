@@ -1,0 +1,234 @@
+/* font-family: 'Libre Franklin', sans-serif;
+
+font-family: 'Poppins', sans-serif; */
+/* ==global configuration== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==declaring variables== */
+:root {
+    font-size: 10px;
+
+    --primary-color: #afe8ff;
+    --secondary-color: #fff;
+    --main-color: #ff743c;
+    --text-color: #000;
+}
+
+/* ==generic classes== */
+.container {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 100vw;
+    text-align: center;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    padding: .7rem 0 .5rem 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+}
+
+.subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.text {
+    padding: .5rem 0;
+    font-family: 'Libre Franklin', sans-serif;
+    line-height: 1.7rem;
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+a {
+    font-family: 'Libre Franklin', sans-serif;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.3rem;
+}
+
+a:hover {
+    text-decoration: underline var(--main-color) .15rem;
+    color: var(--main-color);
+}
+
+a:active {
+    color: var(--main-color);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.mobile-hide {
+    display: none;
+}
+
+/* ==header== */
+#header {
+    background-color: var(--secondary-color);
+    border-bottom: hsla(0, 0%, 0%, 0.1) solid 1px;
+
+    position: fixed;
+    top: 0;
+
+    padding: 0.2rem 0;
+}
+
+#header div.container {
+    justify-content: space-between;
+}
+
+#header img {
+    scale: 30%;
+}
+
+#header figure a {
+    display: inline-block;
+    width: 7rem;
+    height: 7rem;
+    background-image: url(../images/BrasaoSuzano.svg);
+    background-position: 5%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#header nav {
+    gap: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+
+#header nav .fa-bars {
+    scale: 200%;
+}
+
+/* ==footer== */
+#back-to-top {
+    justify-content: flex-end;
+}
+
+#back-to-top div a {
+    display: inline-block;
+
+    height: 30px;
+    width: 30px;
+
+    background-image: url(../images/arrow-up-solid.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+}
+
+#footer {
+    padding: .5rem 5vw;
+    border-top: hsla(0, 0%, 0%, 0.1) solid 1px;
+}
+
+#footer p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+#footer #copyright {
+    display: inline-block;
+    width: 100%;
+}
+
+#footer a {
+    text-transform: capitalize;
+}
+
+#footer a:hover {
+    text-decoration: underline var(--text-color) .1rem;
+    color: var(--text-color);
+}
+
+/* ==responsive design== */
+@media screen and (min-width: 810px) {
+    
+    /* ==generic classes== */
+    
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 2rem;
+    }
+
+    .text {
+        line-height: 2.2rem;
+        font-size: 1.8rem;
+    }
+
+    .mobile-hide {
+        display: inline;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .desktop-hide {
+        display: none;
+    }
+
+    a {
+        font-size: 1.5rem;
+    }
+
+    /* ==header== */
+    #header {
+        padding: .5rem 0;
+    }
+
+    #header a {
+        font-size: 1.8rem;
+    }
+
+    #header #search {
+        width: 15vw;
+        height: 2.2rem;
+        padding: .2rem;
+
+        background-image: url(../images/magnifying-glass-solid.svg);
+        background-repeat: no-repeat;
+        background-size: 1.5rem;
+        background-position: 95% 50%;
+
+        border-radius: 1rem;
+    }
+
+    /* ==footer== */
+    #footer #copyright {
+        display: inline;
+    }
+
+    #footer p {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
