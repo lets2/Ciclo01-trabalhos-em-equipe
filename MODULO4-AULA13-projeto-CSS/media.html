@@ -3,186 +3,230 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bem-vindo a Suzano</title>
+    <link rel="stylesheet" href="./src/CSS/index.css">
+    <link rel="stylesheet" href="./src/CSS/media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c86d107cf7.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header id="home">
-        <figure>
-            <a href="https://www.suzano.sp.gov.br/web/cidade/" target="_blank">
-                <img src="./src/images/BrasaoSuzano.svg" alt="Brasão da Cidade de Suzano" height="100" />
-            </a>
-        </figure>
-
-        <svg width="100%" height="30">
-            <rect width="100%" height="30" fill="orange" />
-        </svg>
-
-        <nav>
-            <a href="./index.html">Home</a>
-            <a href="./cidade.html">História</a>
-            <a href="#">Mídias</a>
-            <a href="./contato.html">Contato</a>
-        </nav>
-        <section>
-            <input type="search" name="search" id="search" placeholder="Pesquisar">
-            <input type="button" value="pesquisar">
-        </section>
+    <header id="header" class="container">
+        <div class="container flex-row">
+            <figure>
+                <a href="https://www.suzano.sp.gov.br/web/cidade/" target="_blank">
+                </a>
+            </figure>
+            <nav id="pages-nav" class="grid-container mobile-hide">
+                <a href="./index.html">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    Home
+                </a>
+                <a href="./cidade.html">
+                    <i class="fa-solid fa-book"></i>
+                    História
+                </a>
+                <a href="./media.html">
+                    <i class="fa-solid fa-images"></i>
+                    Mídias
+                </a>
+                <a href="./contato.html">
+                    <i class="fa-solid fa-phone"></i>
+                    Contato
+                </a>
+            </nav>
+            <nav class="desktop-hide">
+                <i class="fa-solid fa-bars"></i>
+            </nav>
+            <section id="nav-search" class="mobile-hide">
+                <input type="search" name="search" id="search" placeholder="Pesquisar" />
+            </section>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h2>Fotos</h2>
+    <main id="main">
+        <section class="container flex-column">
+            <h2 class="title">Fotos</h2>
             <section>
-                <h3>Vista da Cidade</h3>
-                <figure>
-                    <img width="770" src="./src/images/suzano1.jpg" alt="Visão Aérea de Suzano">
-                    <figcaption>
-                        Visão Aérea de Suzano
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img width="770" src="./src/images/suzano2.jpg" alt="Visão Aérea de Suzano">
-                    <figcaption>
-                        Visão Aérea de Suzano
-                    </figcaption>
-                </figure>
+                <h3 class="subtitle">Vista da Cidade</h3>
+                <section class=" flex-row vista media-container">
+                    <figure>
+                        <img src="./src/images/suzano1.jpg" alt="Visão Aérea de Suzano">
+                        <figcaption class="text">
+                            Visão Aérea de Suzano
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./src/images/suzano2.jpg" alt="Visão Aérea de Suzano">
+                        <figcaption class="text">
+                            Visão Aérea de Suzano
+                        </figcaption>
+                    </figure>
+                </section>
             </section>
-            <section>
-                <h3>Estatuas de Pokemon</h3>
-                <figure>
-                    <img width="770" src="./src/images/mew_celebi.jpg" alt="Estatua Pokemon mew e celebi">
-                    <figcaption>
-                        Estatua Pokemon mew e celebi
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img width="770" src="./src/images/charizard.jpg" alt="Estatua Pokemon charizard">
-                    <figcaption>
-                        Estatua Pokemon charizard
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img width="770" src="./src/images/eevee.jpg" alt="Estatua Pokemon eevee">
-                    <figcaption>
-                        Estatua Pokemon eevee
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img width="770" src="./src/images/bulbasaur.JPG" alt="Estatua Pokemon bulbasauro">
-                    <figcaption>
-                        Estatua Pokemon bulbasauro
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img width="770" src="./src/images/larvitar.jpg" alt="Estatua Pokemon larvitar">
-                    <figcaption>
-                        Estatua Pokemon larvitar
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img width="770" src="./src/images/squirtle.jpg" alt="Estatua Pokemon squirtle">
-                    <figcaption>
-                        Estatua Pokemon squirtle
-                    </figcaption>
-                </figure>
-            </section>
-            <section>
-                <h3>Magic City</h3>
-                <figure>
-                    <img width="770" src="./src/images/magic_city1.png" alt="Visão Aérea Magic City">
-                    <figcaption>
-                        Visão Aérea Magic City
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img width="770" src="./src/images/magic_city2.jpg" alt="Visão Aérea Magic City">
-                    <figcaption>
-                        Visão Aérea Magic City
-                    </figcaption>
-                </figure>
-            </section>
-            <section>
-                <h3>Viveiro Municipal</h3>
-                <figure>
-                    <img width="770" src="./src/images/viveiro_municiapl4.webp" alt="Entrada Viveiro Municipal">
-                    <figcaption>
-                        Entrada Viveiro Municipal
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img width="770" src="./src/images/viveiro_municipal2.jpg" alt="Fonte Viveiro Municipal">
-                    <figcaption>
-                        Fonte Viveiro Municipal
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img width="770" src="./src/images/viveiro_municipal3.jpg" alt="Flores Viveiro Municipal">
-                    <figcaption>
-                        Flores Viveiro Municipal
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img width="770" src="./src/images/viveiro_municipal.jpg" alt="Ponte Viveiro Municipal">
-                    <figcaption>
-                        Ponte Viveiro Municipal
-                    </figcaption>
-                </figure>
-            </section>
-            <section>
-                <h3>Templo Jomyoji</h3>
-                <figure>
-                    <img width="770" src="./src/images/templo1.jpg" alt="Templo principal">
-                    <figcaption>
-                        Templo principal
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img width="770" src="./src/images/templo2.jpg" alt="Templo lateral">
-                    <figcaption>
-                        Templo lateral
-                    </figcaption>
-                </figure>
-            </section>
-            <section>
-                <h3>Igreja Baruel</h3>
-                <figure>
-                    <img width="770" src="./src/images/igreja1.JPG" alt="Visão frontal da Igreja Baruel">
-                    <figcaption>
-                        Visão frontal da Igreja Baruel
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img width="770" src="./src/images/igreja2.jpg" alt="Visão lateral da Igreja Baruel">
-                    <figcaption>
-                        Visão lateral da Igreja Baruel
-                    </figcaption>
-                </figure>
-            </section>
-        </section>
-        <section>
-            <h2>Videos</h2>
-            <iframe type="text/html" width="640" height="360" src="https://www.youtube.com/embed/NASo4RRK-iI"
-                frameborder="0"></iframe>
-            <br>
-            <iframe type="text/html" width="640" height="360" src="https://www.youtube.com/embed/CG4Eua_shc8"
-                frameborder="0"></iframe>
-            <br>
-            <iframe type="text/html" width="640" height="360" src="https://www.youtube.com/embed/0fsFnkPdFRI"
-                frameborder="0"></iframe>
-        </section>
-        <p><a href="#home">Ir para o topo dessa pagina.</a></p>
-    </main>
 
-    <footer>
-        <svg width="100%" height="30">
-            <rect width="100%" height="30" fill="orange" />
-        </svg>
-        <h6>Copyright @Truma-4</h6>
-        <p>Elaborado por: Anderson, Arthur, Letônio e Thiago</p>
+            <section>
+                <h3 class="subtitle">Estatuas de Pokemon</h3>
+                <section class="flex-row pokedex media-container">
+                    <figure>
+                        <img src="./src/images/mew_celebi.jpg" alt="Estatua Pokemon mew e celebi">
+                        <figcaption class="text">
+                            Estatua Pokemon mew e celebi
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./src/images/charizard.jpg" alt="Estatua Pokemon charizard">
+                        <figcaption class="text">
+                            Estatua Pokemon charizard
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./src/images/eevee.jpg" alt="Estatua Pokemon eevee">
+                        <figcaption class="text">
+                            Estatua Pokemon eevee
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./src/images/bulbasaur.JPG" alt="Estatua Pokemon bulbasauro">
+                        <figcaption class="text">
+                            Estatua Pokemon bulbasauro
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./src/images/larvitar.jpg" alt="Estatua Pokemon larvitar">
+                        <figcaption class="text">
+                            Estatua Pokemon larvitar
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./src/images/squirtle.jpg" alt="Estatua Pokemon squirtle">
+                        <figcaption class="text">
+                            Estatua Pokemon squirtle
+                        </figcaption>
+                    </figure>
+                </section>
+            </section>
+
+            <section>
+                <h3 class="subtitle">Magic City</h3>
+                <section class="flex-row media-container magic-city">
+                    <figure>
+                        <img src="./src/images/magic_city1.png" alt="Visão Aérea Magic City">
+                        <figcaption class="text">
+                            Visão Aérea Magic City
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./src/images/magic_city2.jpg" alt="Visão Aérea Magic City">
+                        <figcaption class="text">
+                            Visão Aérea Magic City
+                        </figcaption>
+                    </figure>
+                </section>
+            </section>
+
+            <section>
+                <h3 class="subtitle">Viveiro Municipal</h3>
+                <section class="flex-row viveiro media-container">
+                    <figure>
+                        <img src="./src/images/viveiro_municiapl4.webp" alt="Entrada Viveiro Municipal">
+                        <figcaption class="text">
+                            Entrada Viveiro Municipal
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./src/images/viveiro_municipal2.jpg" alt="Fonte Viveiro Municipal">
+                        <figcaption class="text">
+                            Fonte Viveiro Municipal
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./src/images/viveiro_municipal3.jpg" alt="Flores Viveiro Municipal">
+                        <figcaption class="text">
+                            Flores Viveiro Municipal
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./src/images/viveiro_municipal.jpg" alt="Ponte Viveiro Municipal">
+                        <figcaption class="text">
+                            Ponte Viveiro Municipal
+                        </figcaption>
+                    </figure>
+                </section>
+            </section>
+
+            <section>
+                <h3 class="subtitle">Templo Jomyoji</h3>
+                <section class="flex-row templo media-container">
+                    <figure>
+                        <img src="./src/images/templo1.jpg" alt="Templo principal">
+                        <figcaption class="text">
+                            Templo principal
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./src/images/templo2.jpg" alt="Templo lateral">
+                        <figcaption class="text">
+                            Templo lateral
+                        </figcaption>
+                    </figure>
+                </section>
+            </section>
+
+            <section>
+                <h3 class="subtitle">Igreja Baruel</h3>
+                <section class="flex-row igreja media-container">
+                    <figure>
+                        <img src="./src/images/igreja1.JPG" alt="Visão frontal da Igreja Baruel">
+                        <figcaption class="text">
+                            Visão frontal da Igreja Baruel
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./src/images/igreja2.jpg" alt="Visão lateral da Igreja Baruel">
+                        <figcaption class="text">
+                            Visão lateral da Igreja Baruel
+                        </figcaption>
+                    </figure>
+                </section>
+            </section>
+        </section>
+
+        <section class="footer-img">
+            <section class="flex-column">
+                <h2 class="title">Videos</h2>
+                <section class="flex-row videos media-container">
+                    <iframe type="text/html" src="https://www.youtube.com/embed/NASo4RRK-iI" frameborder="0"></iframe>
+
+                    <iframe type="text/html" src="https://www.youtube.com/embed/CG4Eua_shc8" frameborder="0"></iframe>
+
+                    <iframe type="text/html" src="https://www.youtube.com/embed/0fsFnkPdFRI" frameborder="0"></iframe>
+                </section>
+            </section>
+
+            <div id="back-to-top" class="flex-row container">
+                <div>
+                    <a href="#main"></a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer class="container flex-row" id="footer">
+        <p class="text"> <span id="copyright"> Copyright © 2022 - Hopper</span> <span class="mobile-hide">|</span>
+            Developed by
+            <a href="https://github.com/andersondaalpha" target="_blank">Anderson</a>, <a
+                href="https://github.com/arthurMancioSales" target="_blank">Arthur</a>, <a
+                href="https://github.com/arthurMancioSales" target="_blank">Letônio</a> and <a
+                href="https://github.com/ThiagoOitaven" target="_blank">Thiago</a>
+        </p>
     </footer>
 </body>
 
