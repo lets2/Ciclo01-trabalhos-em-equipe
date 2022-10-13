@@ -123,6 +123,10 @@ a:active {
     z-index: 10;
 }
 
+header{
+    width: 100%;
+}
+
 #header div.container {
     justify-content: space-between;
     padding: 0 5vw;
