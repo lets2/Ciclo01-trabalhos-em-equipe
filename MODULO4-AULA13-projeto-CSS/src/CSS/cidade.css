@@ -7,9 +7,11 @@ font-family: 'Poppins', sans-serif; */
     padding: 0;
     box-sizing: border-box;
 }
+
 html{
     scroll-behavior: smooth;
 }
+
 /* ==declaring variables== */
 :root {
     font-size: 10px;
@@ -97,9 +99,11 @@ a:active {
     padding: 0.2rem 0;
 }
 
+
 header{
     width: 100%;
 }
+
 #header div.container {
     justify-content: space-between;
 }
@@ -212,6 +216,7 @@ table tr th{
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
     FOOTER MOBILE
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-*/
+
 #back-to-top {
     justify-content: flex-end;
 }
@@ -236,6 +241,7 @@ table tr th{
   
         transform: translateY(-1rem);
     }
+
 }
 
 #footer {
@@ -261,7 +267,6 @@ table tr th{
     text-decoration: underline var(--text-color) .1rem;
     color: var(--text-color);
 }
-
 
 /* ==responsive design== */
 @media screen and (min-width: 810px) {
@@ -320,6 +325,7 @@ table tr th{
         border-radius: 1rem;
     }
 
+
     /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
     STYLING MAIN DESKTOP
     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-*/
@@ -352,6 +358,7 @@ table tr th{
     table{
         font-size: 1.8rem;
     }
+
 
     /* ==footer== */
     #footer #copyright {

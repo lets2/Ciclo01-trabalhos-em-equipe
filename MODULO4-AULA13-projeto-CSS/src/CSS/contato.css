@@ -1,0 +1,483 @@
+/* font-family: 'Libre Franklin', sans-serif;
+
+font-family: 'Poppins', sans-serif; */
+/* ==global configuration== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==declaring variables== */
+:root {
+    font-size: 10px;
+
+    --primary-color: #afe8ff;
+    --secondary-color: #fff;
+    --main-color: #ff743c;
+    --text-color: #000;
+}
+
+/* ==generic classes== */
+.container {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 100vw; /* Sugerir que Arthur tire esse 100vw e coloque 100% e depois coloque um tamanho de 100% na Header */
+    text-align: center;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    padding: .7rem 0 .5rem 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+}
+
+.subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.text {
+    padding: .5rem 0;
+    font-family: 'Libre Franklin', sans-serif;
+    line-height: 1.7rem;
+    font-size: 1.3rem;
+    text-align: justify;
+    /* Sugerir a Arthur que colocar a variável de cor de texto aqui também */
+}
+
+a {
+    font-family: 'Libre Franklin', sans-serif;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.3rem;
+}
+
+a:hover {
+    text-decoration: underline var(--main-color) .15rem;
+    color: var(--main-color);
+}
+
+a:active {
+    color: var(--main-color);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.mobile-hide {
+    display: none;
+}
+
+/* ==header== */
+#header {
+    background-color: var(--secondary-color);
+    border-bottom: hsla(0, 0%, 0%, 0.1) solid 1px;
+
+    position: fixed;
+    top: 0;
+
+    padding: 0.2rem 0;
+}
+
+#header div.container {
+    justify-content: space-between;
+}
+
+#header img {
+    scale: 30%;
+}
+
+#header figure a {
+    display: inline-block;
+    width: 7rem;
+    height: 7rem;
+    background-image: url(../images/BrasaoSuzano.svg);
+    background-position: 5%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#header nav {
+    gap: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+
+#header nav .fa-bars {
+    scale: 200%;
+}
+
+/* ==footer== */
+#back-to-top {
+    justify-content: flex-end;
+}
+
+#back-to-top div a {
+    display: inline-block;
+
+    height: 30px;
+    width: 30px;
+
+    background-image: url(../images/arrow-up-solid.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+}
+
+#footer {
+    padding: .5rem 5vw;
+    border-top: hsla(0, 0%, 0%, 0.1) solid 1px;
+}
+
+#footer p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+#footer #copyright {
+    display: inline-block;
+    width: 100%;
+}
+
+#footer a {
+    text-transform: capitalize;
+}
+
+#footer a:hover {
+    text-decoration: underline var(--text-color) .1rem;
+    color: var(--text-color);
+}
+
+/* ==contato== */
+
+/* Configurações da Main */
+
+#main {
+    margin-top: 83px;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23afe8ff80' fill-opacity='1'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-size: 4%;
+}
+
+/* Containers dos contatos e formulário */
+
+#general-content {
+    width: 100%;
+}
+
+
+/* Estilização dos contatos e localização */
+
+#container-contacts-map {
+    width: 100%;
+    padding: 5%;
+    background-color: var(--secondary-color);
+    border: 2px solid hsla(0, 0%, 0%, 0.1);
+    border-radius: 0.5rem;
+}
+
+#text-contact {
+    width: 100%;
+}
+
+#container-map {
+    width: 100%;
+}
+
+/* #title-contact {
+    background-color: var(--secondary-color);
+} */
+
+#map {
+    width: 100%;
+    border: 0;
+}
+
+/* Estilização dos formulários */
+
+#container-form {
+    width: 100%;
+    padding: 2rem 2rem;
+    margin: 10px 0;
+    /* background-color: var(--secondary-color); */
+    border: 2px solid hsla(0, 0%, 0%, 0.1);
+    border-radius: 0.5rem;
+}
+
+form {
+    width: 90%;
+}
+
+#input-form > label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#city-and-state {
+    width: 100%;
+}
+
+#input-form input, #input-form select {
+    width: 100%;
+    height: 5rem;
+    border: 2px solid hsla(0, 0%, 0%, 0.1);
+    border-radius: 0.5rem;
+    padding: 0.2rem 1rem;
+}
+
+#input-form textarea {
+    width: 100%;
+    height: 10rem;
+    border: 2px solid hsla(0, 0%, 0%, 0.1);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+#input-form textarea:focus, #input-form input:focus, #input-form select:focus {
+    /* box-shadow: 0 0 0 0; */
+    /* border: 2px solid var(--main-color); */
+    border: var(--main-color) solid 2px;
+    outline: none;
+    /* background-color: black; */
+} 
+
+/* Estilização do botão do formulário */
+
+/* Sugerir a Arthur que crie uma classe para botões */
+
+#button {
+    padding: 6px 12px;
+    color: var(--secondary-color);
+    background-color: var(--main-color);
+    border: 1px solid var(--secondary-color);
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+#button:hover {
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+/* ==responsive design== */
+@media screen and (min-width: 810px) {
+    
+    /* ==generic classes== */
+    
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 2rem;
+    }
+
+    .text {
+        line-height: 2.2rem;
+        font-size: 1.8rem;
+    }
+
+    .mobile-hide {
+        display: inline;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .desktop-hide {
+        display: none;
+    }
+
+    a {
+        font-size: 1.5rem;
+    }
+
+    /* ==header== */
+    #header {
+        padding: .5rem 0;
+    }
+
+    #header a {
+        font-size: 1.8rem;
+    }
+
+    #header #search {
+        width: 15vw;
+        height: 2.2rem;
+        padding: .2rem;
+
+        background-image: url(../images/magnifying-glass-solid.svg);
+        background-repeat: no-repeat;
+        background-size: 1.5rem;
+        background-position: 95% 50%;
+
+        border-radius: 1rem;
+    }
+
+    /* ==footer== */
+    #footer #copyright {
+        display: inline;
+    }
+
+    #footer p {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    /* ==Main== */
+
+    /* Configurações da Main */
+    
+    #main {
+        min-height: calc(100vh - 126px);
+        justify-content: space-around;
+        /* align-content: stretch; */
+        /* margin-top: 83px; */
+        /* background-color: var(--primary-color); */
+    }
+
+    /* Containers dos contatos e formulário */
+
+    #general-content {
+        /* width: 100%; */
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: stretch;
+        align-items: flex-start;
+        padding-bottom: 2%;
+        /* padding: 0px; */
+    }
+
+    #container-contacts {
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        align-items: stretch;
+    }
+
+
+    /* Estilização dos contatos e localização */
+
+   /*  #title-contact {
+        min-height: 80vh;
+    } */
+
+    #text-contact {
+        text-align: left;
+    }
+
+    #container-contacts-map {
+        width: 45%;
+        /* height: 100%; */
+        justify-content: space-between;
+        /* align-items: flex-start; */
+        /* flex: 1; */
+        padding: 2%;
+        /* height: 65vh; */
+        /* margin: 3%; */
+        /* background-color: var(--secondary-color); */
+    }
+
+    #container-map {
+        width: 100%;
+        flex: 1;
+    }
+
+    #map {
+        width: 100%;
+        height: 100%;
+        /* height: 40vh; */
+        /* border: 0; */
+    }
+
+    /* Estilização dos formulários */
+
+    #form-complete {
+        width: 45%;
+    }
+    #container-form {
+        width: 100%;
+        /* height: 65vh; */
+        padding: 2rem 4rem;
+        margin: 0;
+        background-color: var(--secondary-color);
+    }
+
+    form {
+        width: 100%;
+    }
+
+    #city-and-state {
+        width: 100%;
+        display: flex;
+    }
+
+    #city {
+        width: 80%;
+    }
+
+/*     #city-and-state label {
+        width: 20%;
+    }
+
+    #city-and-state input {
+        width: 20%;
+    }
+
+    #city-and-state select {
+        width: 20%;
+    } */
+
+    #input-form {
+        width: 100%;
+    }
+    #input-form label{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        /* width: 100%; */
+        /* padding: 1%; */
+        line-height: 2.5rem;
+    }
+
+    #input-form input{
+        width: 100%;
+        height: 2.5rem;
+    }
+
+    #input-form select {
+        width: 100%;
+        height: 2.5rem;
+    }
+
+    #input-form textarea {
+        width: 100%;
+        height: 10rem;
+    }
+}

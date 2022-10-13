@@ -1,0 +1,125 @@
+/* ==global configuration== */
+main {
+    padding-top: 10rem;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23afe8ff' fill-opacity='1'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ==generic classes== */
+.text {
+    text-align: center;
+}
+
+.media-container {
+    gap: 1vh 2vw;
+    padding: 3rem 0;
+    height: 60vh;
+    flex-wrap: wrap;
+}
+
+img {
+    object-fit: cover;
+    object-position: top;
+    height: 90%;
+    width: 100%;
+    transition: all 400ms ease-in-out;
+}
+
+
+main figure {
+    height: 90%;
+    width: 42vw;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+figcaption {
+    position: relative;
+    z-index: 2;
+    height: 10%;
+    align-self: flex-end;
+    transition: all 400ms ease-in;
+}
+
+/* ==styling== */
+.pokedex,
+.viveiro {
+    height: 100vh;
+}
+
+.pokedex>figure {
+    width: 30%;
+    height: 50%;
+}
+
+.viveiro>figure {
+    height: 50%;
+}
+
+.videos {
+    width: 100%;
+}
+
+iframe {
+    height: 35vh;
+    width: 25%;
+}
+
+#back-to-top {
+    background-color: transparent;
+}
+
+.footer-img {
+    background-image: url(../images/layered-waves-haikei.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+#footer {
+    border: none;
+}
+
+/* ==animations== */
+main figure:hover img {
+    transform: scale(1.2);
+}
+
+main figure:hover {
+    border: 3px solid var(--main-color);
+}
+
+main figure:hover figcaption {
+    background-color: var(--secondary-color);
+}
+
+/* ==responsive design== */
+@media (max-width: 810px) {
+
+    .media-container {
+        height: auto;
+        width: 100%;
+        gap: 2vh 0;
+    }
+
+    main figure,
+    .pokedex>figure,
+    .viveiro>figure {
+        height: 50%;
+        width: 100%;
+    }
+
+    .videos {
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    iframe {
+        width: 90%;
+    }
+
+    .footer-img {
+        background-size: contain;
+    }
+
+}
