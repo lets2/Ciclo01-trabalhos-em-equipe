@@ -66,6 +66,7 @@ a {
     text-decoration: none;
     font-size: 1.3rem;
     color: var(--text-color);
+    transition: all 400ms ease;
 }
 
 a:hover {
@@ -136,7 +137,7 @@ a:active {
 
     width: 7rem;
     height: 7rem;
-    
+
     background-image: url(../images/BrasaoSuzano.svg);
     background-position: 5%;
     background-size: 100%;
@@ -172,8 +173,10 @@ main {
     background-image: url(../images/banner-cidade.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: 0% 5%;
+    background-position: 0% 8%;
     background-attachment: fixed;
+
+    justify-content: flex-end;
 }
 
 #hero h1 {
@@ -181,13 +184,13 @@ main {
     color: var(--secondary-color);
 }
 
+#hero svg {
+    margin-bottom: -1px;
+}
+
 /* ==galery section== */
 #galery div {
     background-color: var(--secondary-color);
-}
-
-#galery svg ~ svg {
-    transform: rotateZ(180deg);
 }
 
 #galery figure,
@@ -206,11 +209,23 @@ main {
 }
 
 #galery .image-container {
+    height: 100%;
     overflow: hidden;
+    border: transparent 3px solid;
+    transition: all 600ms ease;
+}
+
+#galery figure:hover .image-container {
+    border: var(--main-color) 3px solid;
 }
 
 #galery figcaption {
     padding-top: 1rem;
+    font-size: 1.2rem;
+}
+
+#galery svg ~ svg {
+    transform: rotateZ(180deg);
 }
 
 /* ==final section== */
@@ -232,9 +247,9 @@ main {
     height: 27px;
 
     padding: 0.2rem 1rem;
-    
+
     line-height: 0.8rem;
-    
+
     border-radius: 0.5rem;
 }
 
@@ -303,19 +318,8 @@ main {
 
 /* ==responsive design== */
 @media screen and (min-width: 810px) {
-    /* ==generic classes== */
-
-    .title {
-        font-size: 2.5rem;
-    }
-
-    .subtitle {
-        font-size: 2rem;
-    }
-
-    .text {
-        font-size: 1.8rem;
-        line-height: 2.2rem;
+    :root {
+        font-size: 14px;
     }
 
     .mobile-hide {
@@ -331,17 +335,19 @@ main {
         display: none;
     }
 
-    a {
-        font-size: 1.5rem;
+    .container {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    /* ==hero section== */
+    #hero {
+        background-position: 0% 0%;
     }
 
     /* ==header== */
     #header {
         padding: 0.5rem 0;
-    }
-
-    #header a {
-        font-size: 1.8rem;
     }
 
     #header #search {
@@ -358,6 +364,102 @@ main {
         border-radius: 1rem;
     }
 
+    /* ==curiosity section== */
+    #curiosity {
+        padding-bottom: 0;
+    }
+
+    /* ==hero section== */
+    #hero h1 {
+        font-size: 3.5rem;
+    }
+
+    /* ==galery section== */
+    #galery > div {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        column-gap: 1rem;
+    }
+
+    #galery .title {
+        grid-column: 1 / 4;
+    }
+
+    #galery .text {
+        text-align: center;
+    }
+
+    #galery-container {
+        height: 40vh;
+        flex-direction: row;
+    }
+
+    #galery figure {
+        height: 100%;
+
+    }
+
+    #galery img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #galery svg:nth-child(1) {
+        margin-top: -5vh;
+    }
+
+    #galery svg ~ svg {
+        transform: rotateZ(180deg);
+        margin-bottom: -7vh;
+    }
+
+    #galery figcaption {
+        font-size: 1rem;
+    }
+    
+    /* ==final section== */
+    #background-wrap {
+        background-position: 0% 13%;
+    }
+
+    /* ==history section== */
+    #history > div{
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        grid-template-rows: auto auto;
+        column-gap: 2rem;
+        align-items: center;
+    }
+
+    #history > div h2 {
+        grid-column: 1 / 4;
+    }
+
+    #history > div div {
+        padding-top: 0;
+    }
+
+    #history p {
+        min-height: 30vh;
+        max-height: 30vh;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    /* ==news section== */
+    #news input[type="email"] {
+        width: 50vw;
+        height: 37px;
+    
+        padding: 0.2rem 1rem;
+    
+        line-height: 0.8rem;
+    
+        border-radius: 0.5rem;
+    }
+
     /* ==footer== */
     #footer #copyright {
         display: inline;
@@ -366,5 +468,16 @@ main {
     #footer p {
         font-size: 1.5rem;
         text-align: center;
+    }
+}
+
+@media screen and (max-height: 1030px) and (min-width: 810px) {
+    #galery svg:nth-child(1) {
+        margin-top: -10vh;
+    }
+
+    #galery svg ~ svg {
+        transform: rotateZ(180deg);
+        margin-bottom: -15vh;
     }
 }
