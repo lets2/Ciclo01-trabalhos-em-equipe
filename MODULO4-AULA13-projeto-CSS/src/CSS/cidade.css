@@ -95,7 +95,7 @@ a:active {
 
     position: fixed;
     top: 0;
-
+    z-index: 2;
     padding: 0.2rem 0;
 }
 
@@ -147,6 +147,14 @@ header{
     margin: 0;
     padding: 0;
 }
+.wave-top{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    transform: translateY(0.5rem);
+}
+
+
 
 .section-impar{
     background-color: var(--secondary-color);
@@ -211,7 +219,10 @@ table tr{
 table tr th{
     background-color: var(--main-color);
 }
-
+td{
+    width: 50%;
+    padding: 0.2rem;
+}
 
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
     FOOTER MOBILE
@@ -246,7 +257,6 @@ table tr th{
 
 #footer {
     padding: .5rem 5vw;
-    border-top: hsla(0, 0%, 0%, 0.1) solid 1px;
 }
 
 #footer p {
@@ -268,11 +278,20 @@ table tr th{
     color: var(--text-color);
 }
 
+.footer-img {
+    background-size: contain;
+}
+
 /* ==responsive design== */
 @media screen and (min-width: 810px) {
     
     /* ==generic classes== */
     
+    :root{
+        font-size: 14px;
+    }
+
+/*
     .title {
         font-size: 2.5rem;
     }
@@ -285,6 +304,7 @@ table tr th{
         line-height: 2.2rem;
         font-size: 1.8rem;
     }
+    */
 
     .mobile-hide {
         display: inline;
@@ -298,20 +318,21 @@ table tr th{
     .desktop-hide {
         display: none;
     }
-
+/*
     a {
         font-size: 1.5rem;
     }
+    */
 
     /* ==header== */
     #header {
         padding: .5rem 0;
     }
-
+/*
     #header a {
         font-size: 1.8rem;
     }
-
+*/
     #header #search {
         width: 15vw;
         height: 2.2rem;
@@ -330,6 +351,7 @@ table tr th{
     STYLING MAIN DESKTOP
     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-*/
     #suzano{
+       text-align: center;
         margin-top: 8rem;
     }
 
@@ -342,9 +364,9 @@ table tr th{
         margin-bottom: 1rem;
         
     }
-
+/*LOOOOK HEEEEEEEEEEEEEEREEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
     .link-text-history{
-        font-size: 1.8rem ;
+        font-size: 1.3rem ;
     }
     .legend-image{
         font-size: 1.3rem;
@@ -356,7 +378,7 @@ table tr th{
         flex-wrap: wrap;
     }
     table{
-        font-size: 1.8rem;
+        font-size: 1.3rem;
     }
 
 
@@ -368,5 +390,12 @@ table tr th{
     #footer p {
         text-align: center;
         font-size: 1.5rem;
+    }
+  
+    .footer-img {
+        background-image: url(../images/layered-waves-haikei.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
     }
 }
