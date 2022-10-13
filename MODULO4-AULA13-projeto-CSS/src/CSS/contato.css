@@ -366,6 +366,7 @@ form {
         /* width: 100%; */
         justify-content: space-around;
         flex-direction: row;
+        flex-wrap: wrap;
         align-content: stretch;
         align-items: flex-start;
         padding-bottom: 2%;
