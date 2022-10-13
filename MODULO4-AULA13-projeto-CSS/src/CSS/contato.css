@@ -174,7 +174,9 @@ a:active {
 
 #main {
     margin-top: 83px;
-    background-color: var(--primary-color);
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23afe8ff80' fill-opacity='1'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-size: 4%;
 }
 
 /* Containers dos contatos e formulário */
@@ -190,7 +192,7 @@ a:active {
     width: 100%;
     padding: 5%;
     background-color: var(--secondary-color);
-    border: 2px solid var(--main-color);
+    border: 2px solid hsla(0, 0%, 0%, 0.1);
     border-radius: 0.5rem;
 }
 
@@ -215,10 +217,10 @@ a:active {
 
 #container-form {
     width: 100%;
-    padding: 10px 0;
+    padding: 2rem 2rem;
     margin: 10px 0;
-    background-color: var(--secondary-color);
-    border: 2px solid var(--main-color);
+    /* background-color: var(--secondary-color); */
+    border: 2px solid hsla(0, 0%, 0%, 0.1);
     border-radius: 0.5rem;
 }
 
@@ -241,7 +243,7 @@ form {
 #input-form input, #input-form select {
     width: 100%;
     height: 5rem;
-    border: 2px solid var(--main-color);
+    border: 2px solid hsla(0, 0%, 0%, 0.1);
     border-radius: 0.5rem;
     padding: 0.2rem 1rem;
 }
@@ -249,16 +251,18 @@ form {
 #input-form textarea {
     width: 100%;
     height: 10rem;
-    border: 2px solid var(--main-color);
+    border: 2px solid hsla(0, 0%, 0%, 0.1);
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
 }
 
-/* textarea:focus, input:focus, select:focus {
-    box-shadow: 0 0 0 0;
-    border: 1px solid var(--main-color);
+#input-form textarea:focus, #input-form input:focus, #input-form select:focus {
+    /* box-shadow: 0 0 0 0; */
+    /* border: 2px solid var(--main-color); */
+    border: var(--main-color) solid 2px;
     outline: none;
-}  */
+    /* background-color: black; */
+} 
 
 /* Estilização do botão do formulário */
 
@@ -362,12 +366,15 @@ form {
 
     #general-content {
         /* width: 100%; */
-        justify-content: space-around;
-        flex-direction: row;
-        align-content: stretch;
-        align-items: flex-start;
         padding-bottom: 2%;
         /* padding: 0px; */
+    }
+
+    #container-contacts {
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        align-items: stretch;
     }
 
 
@@ -382,8 +389,8 @@ form {
     }
 
     #container-contacts-map {
-        width: 40%;
-        height: 100%;
+        width: 45%;
+        /* height: 100%; */
         justify-content: space-between;
         /* align-items: flex-start; */
         /* flex: 1; */
@@ -407,10 +414,13 @@ form {
 
     /* Estilização dos formulários */
 
+    #form-complete {
+        width: 45%;
+    }
     #container-form {
-        width: 40%;
+        width: 100%;
         /* height: 65vh; */
-        padding: 2%;
+        padding: 2rem 4rem;
         margin: 0;
         background-color: var(--secondary-color);
     }
@@ -440,6 +450,9 @@ form {
         width: 20%;
     } */
 
+    #input-form {
+        width: 100%;
+    }
     #input-form label{
         display: flex;
         flex-direction: column;

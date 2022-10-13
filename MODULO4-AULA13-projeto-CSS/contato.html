@@ -49,80 +49,79 @@
     </header>
 
     <main class="container flex-column" id="main">
-      <h2 class="title" id="title-contact">Contato</h3>
-      <article class="flex-column" id="general-content">
-        <section class="flex-column" id="container-contacts-map">
-          <address id="contacts">
-            <h3 class="subtitle">Localização e telefone</h3>
-            <div class="text" id="text-contact">
-              <p>Rua Baruel, 501 - Centro CEP: 08675-000</p>
-              <p>Telefone: <a href="tel:+5547447322">(11) 4744-7322</a></p>
-            </div>       
-          </address> 
-  
-          <figure id="container-map">
-            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d278208.3549536655!2d-46.468946026005895!3d-23.626509122358605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce7176a5cf4309%3A0x7678f276a368e6e2!2sSuzano%20-%20Palmeiras%20de%20S%C3%A3o%20Paulo%2C%20Suzano%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1663972582894!5m2!1spt-BR!2sbr"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </figure>
-        </section>
-        
-        <section class="flex-column" id="container-form">
-          <form>
-            <h3 class="subtitle">Entre em contato conosco</h3>
-            <div class="flex-column text" id="input-form">
-              <label>Nome completo:<input type="text" name="name" placeholder="Nome completo"></label>        
-              <label>E-mail:<input type="email" name="email" placeholder="E-mail"></label>        
-              <label>Fone ou Whatsapp:<input type="tel" name="tel" placeholder="Telefone"></label>        
-              
-              <div id="city-and-state">
-                <label id="city">Cidade:<input type="text" name="city" placeholder="Cidade"></label>
-              
-                <label id="state" for="state">Estado:
-                  <select name="state">
-                    <option value="none">Selecione</option>
-                    <option value="AC">AC</option>
-                    <option value="AL">AL</option>
-                    <option value="AP">AP</option>
-                    <option value="AM">AM</option>
-                    <option value="BA">BA</option>
-                    <option value="CE">CE</option>
-                    <option value="DF">DF</option>
-                    <option value="ES">ES</option>
-                    <option value="GO">GO</option>
-                    <option value="MA">MA</option>
-                    <option value="MT">MT</option>
-                    <option value="MS">MS</option>
-                    <option value="MG">MG</option>
-                    <option value="PA">PA</option>
-                    <option value="PB">PB</option>
-                    <option value="PR">PR</option>
-                    <option value="PE">PE</option>
-                    <option value="PI">PI</option>
-                    <option value="RJ">RJ</option>
-                    <option value="RN">RN</option>
-                    <option value="RS">RS</option>
-                    <option value="RO">RO</option>
-                    <option value="RR">RR</option>    
-                    <option value="SC">SC</option>    
-                    <option value="SP">SP</option>    
-                    <option value="SE">SE</option>    
-                    <option value="TO">TO</option>        
-                  </select>
-                </label>
-                
-              </div>               
-              
-              <label for="blocktext">Deixe seu comentário:</label>
-              <textarea name="blocktext" id="blocktext"></textarea>
-            </div>
-          </form>
-          <input id="button" type="button" value="Enviar">
-        </section>
-      </article>
-    </main>
+      <section class="flex-column" id="general-content">
+        <h2 class="title" id="title-contact">Contato</h3>
+        <div class="flex-column" id="container-contacts">
+          <div class="flex-column" id="container-contacts-map">
+            <address id="contacts">
+              <h3 class="subtitle">Localização e telefone</h3>
+              <div class="text" id="text-contact">
+                <p>Rua Baruel, 501 - Centro CEP: 08675-000</p>
+                <p>Telefone: <a href="tel:+5547447322">(11) 4744-7322</a></p>
+              </div>       
+            </address> 
+    
+            <figure id="container-map">
+              <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d278208.3549536655!2d-46.468946026005895!3d-23.626509122358605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce7176a5cf4309%3A0x7678f276a368e6e2!2sSuzano%20-%20Palmeiras%20de%20S%C3%A3o%20Paulo%2C%20Suzano%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1663972582894!5m2!1spt-BR!2sbr"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </figure>
+          </div>
 
+          <div id="form-complete">
+            <form class="flex-column" id="container-form">
+              <h3 class="subtitle">Entre em contato conosco</h3>
+              <div class="flex-column text" id="input-form">
+                <label>Nome completo:<input type="text" name="name" placeholder="Nome completo"></label>        
+                <label>E-mail:<input type="email" name="email" placeholder="E-mail"></label>        
+                <label>Fone ou Whatsapp:<input type="tel" name="tel" placeholder="Telefone"></label>        
+                
+                <div id="city-and-state">
+                  <label id="city">Cidade:<input type="text" name="city" placeholder="Cidade"></label>
+                
+                  <label id="state" for="state">Estado:
+                    <select name="state">
+                      <option value="none">Selecione</option>
+                      <option value="AC">AC</option>
+                      <option value="AL">AL</option>
+                      <option value="AP">AP</option>
+                      <option value="AM">AM</option>
+                      <option value="BA">BA</option>
+                      <option value="CE">CE</option>
+                      <option value="DF">DF</option>
+                      <option value="ES">ES</option>
+                      <option value="GO">GO</option>
+                      <option value="MA">MA</option>
+                      <option value="MT">MT</option>
+                      <option value="MS">MS</option>
+                      <option value="MG">MG</option>
+                      <option value="PA">PA</option>
+                      <option value="PB">PB</option>
+                      <option value="PR">PR</option>
+                      <option value="PE">PE</option>
+                      <option value="PI">PI</option>
+                      <option value="RJ">RJ</option>
+                      <option value="RN">RN</option>
+                      <option value="RS">RS</option>
+                      <option value="RO">RO</option>
+                      <option value="RR">RR</option>    
+                      <option value="SC">SC</option>    
+                      <option value="SP">SP</option>    
+                      <option value="SE">SE</option>    
+                      <option value="TO">TO</option>        
+                    </select>
+                  </label>
+                </div>              
+                <label for="blocktext">Deixe seu comentário:</label>
+                <textarea name="blocktext" id="blocktext"></textarea>
+              </div>
+              <input id="button" type="button" value="Enviar">
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer class="container flex-row" id="footer">
       <p class="text"> <span id="copyright"> Copyright © 2022 - Hopper</span> <span class="mobile-hide">|</span> Developed by
         <a href="https://github.com/andersondaalpha" target="_blank">Anderson</a>, <a href="https://github.com/arthurMancioSales" target="_blank">Arthur</a>, <a href="https://github.com/arthurMancioSales" target="_blank">Letônio</a> and <a href="https://github.com/ThiagoOitaven" target="_blank">Thiago</a>
