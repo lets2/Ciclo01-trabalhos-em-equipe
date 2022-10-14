@@ -20,25 +20,33 @@ main {
 img {
     object-fit: cover;
     object-position: top;
-    height: 90%;
+    height: 100%;
     width: 100%;
     transition: all 400ms ease-in-out;
 }
 
 
 main figure {
-    height: 90%;
+    height: 100%;
     width: 42vw;
+}
+
+main figure div {
+    height: 100%;
+    width: 100%;
     overflow: hidden;
     object-fit: contain;
 }
 
 figcaption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     z-index: 2;
-    height: 10%;
-    align-self: flex-end;
-    transition: all 400ms ease-in;
+    height: 5vh;
+    width: 100%;
+    transition: all 400ms ease-in-out;
 }
 
 /* ==styling== */
