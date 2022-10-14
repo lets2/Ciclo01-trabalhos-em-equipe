@@ -348,6 +348,11 @@ a:active {
 
     #text-contact {
         text-align: left;
+        font-size: 1rem;
+    }
+
+    #text-contact a {
+        font-size: 1rem;
     }
 
     #container-contacts-map {
@@ -393,6 +398,7 @@ a:active {
 
     #input-form {
         width: 100%;
+        font-size: 1rem;
     }
     #input-form label{
         display: flex;
