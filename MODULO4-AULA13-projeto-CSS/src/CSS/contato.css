@@ -91,7 +91,7 @@ a:active {
 
     position: fixed;
     top: 0;
-
+    z-index: 3;
     padding: 0.2rem 0;
 }
 
@@ -124,6 +124,52 @@ a:active {
 #header nav .fa-bars {
     scale: 200%;
 }
+
+/*
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+CREATE MENU CLICKABLE
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+*/
+.appear-when-click-menu{
+    width: 100vw;
+    position: absolute;
+    text-align: right;
+    top:7rem;
+    right: 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    
+    background-color: var(--main-color);
+    z-index: 1;
+    transform: translateY(0px);
+    animation: moveMenu 1s;
+}
+.appear-when-click-menu a{
+    padding: 1rem;
+    font-size: 1.7rem;
+}
+.appear-when-click-menu a:hover{
+    color:var(--primary-color);
+}
+.hide-menu-drop{
+    display: none;
+}
+
+@keyframes moveMenu{
+    0%{
+        transform: translateY(-14rem);
+        z-index: 1;
+    }
+    100%{
+        transform: translateY(0);
+        z-index: 1;
+    }
+    
+}
+
 
 /* ==footer== */
 #back-to-top {
@@ -296,13 +342,13 @@ a:active {
     #header #search {
         width: 15vw;
         height: 2.2rem;
-        padding: .2rem;
+        padding: .2rem 1rem;
         background-image: url(../images/magnifying-glass-solid.svg);
         background-repeat: no-repeat;
-        background-size: 1.5rem;
+        background-size: 1.2rem;
         background-position: 95% 50%;
 
-        border-radius: 1rem;
+        border-radius: 0.8rem;
     }
 
     /* ==footer== */
