@@ -134,6 +134,48 @@ header{
     scale: 200%;
 }
 
+/*
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+CREATE MENU CLICKABLE
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+*/
+.appear-when-click-menu{
+    width: 20vw;
+    min-width:8.5rem;
+    max-width: 11rem;
+    position: fixed;
+    text-align: right;
+    top:7.5rem;
+    right: 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom-left-radius: 1rem;
+    background-color: var(--main-color);
+    z-index: 1.5;
+    transform: translateX(0px);
+    animation: moveMenu 0.5s;
+}
+.appear-when-click-menu a{
+    padding: 1rem;
+}
+.appear-when-click-menu a:hover{
+    color:var(--primary-color);
+}
+.hide-menu-drop{
+    display: none;
+}
+
+@keyframes moveMenu{
+    0%{
+        transform: translateX(20vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
      MAIN MOBILE
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-*/
@@ -336,25 +378,33 @@ td{
     #header #search {
         width: 15vw;
         height: 2.2rem;
-        padding: .2rem;
+        padding: .2rem 1rem;
 
         background-image: url(../images/magnifying-glass-solid.svg);
         background-repeat: no-repeat;
-        background-size: 1.5rem;
+        background-size: 1.2rem;
         background-position: 95% 50%;
 
-        border-radius: 1rem;
+        border-radius: 0.8rem;
     }
 
 
     /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
     STYLING MAIN DESKTOP
     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-*/
+    .appear-when-click-menu{
+        display: none;
+    }
     #suzano{
        text-align: center;
         margin-top: 8rem;
+        padding-top: 2rem;
     }
-
+    
+  #summary, .elements{
+    position: relative;
+    top: 4rem;
+  }
   
     .resume-list{
         text-align: left;
